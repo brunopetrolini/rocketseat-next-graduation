@@ -1,0 +1,11 @@
+{
+  "folders": [
+    {
+      "name": "site-blog",
+      "path": "./site-blog"
+    }
+  ],
+  "settings": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
+}
