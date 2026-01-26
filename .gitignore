@@ -1,4 +1,7 @@
-# editor
+# Editor directories and files
 .vscode/*
-!.vscode/settings.json
+!.vscode/extensions.json
 *.code-workspace
+
+# System Files
+.DS_Store
