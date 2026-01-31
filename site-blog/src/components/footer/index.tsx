@@ -4,27 +4,27 @@ import { BrandLogo } from '../brand-logo';
 
 export function Footer() {
   return (
-    <footer className="border-white/10 border-t text-sm">
+    <footer className="bg-gray-500">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center gap-8 py-8 md:justify-between">
           <BrandLogo />
 
-          <nav className="flex flex-col items-start justify-center gap-4 text-muted-foreground text-sm md:flex-row md:items-center">
+          <nav className="flex flex-col items-start justify-center gap-4 text-blue-100 text-muted-foreground text-sm md:flex-row md:items-center">
             <Link
               href="/terms-of-use"
-              className="transition-colors hover:text-primary"
+              className="transition-colors hover:text-blue-200"
             >
               Termos de Uso
             </Link>
             <Link
               href="/privacy-policy"
-              className="transition-colors hover:text-primary"
+              className="transition-colors hover:text-blue-200"
             >
               Política de Privacidade
             </Link>
             <Link
               href="/send-feedback"
-              className="transition-colors hover:text-primary"
+              className="transition-colors hover:text-blue-200"
             >
               Enviar Feedback
             </Link>

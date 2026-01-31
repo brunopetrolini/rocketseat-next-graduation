@@ -16,19 +16,14 @@ export function ActiveLink({
   ...props
 }: ActiveLinkProps) {
   const router = useRouter();
-  const isCurrentPath =
-    router.asPath === href ||
-    router.asPath === props.as ||
-    router.asPath.startsWith(String(props.as));
+  const isCurrentPath = router.asPath === href || router.asPath === props.as;
 
   return (
     <Link
       href={href}
       className={cn(
-        'font-medium text-sm transition-colors hover:text-blue-500',
-        isCurrentPath
-          ? 'pointer-events-none text-blue-500'
-          : 'text-muted-foreground',
+        'text-action-sm transition-colors hover:text-blue-100',
+        isCurrentPath ? 'pointer-events-none text-blue-200' : 'text-gray-100',
         className,
       )}
       {...props}

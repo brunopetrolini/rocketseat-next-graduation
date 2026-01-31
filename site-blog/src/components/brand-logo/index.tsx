@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export function BrandLogo() {
   return (
-    <Link href="/">
+    <Link href="/" title="Home">
       <Image
         src="/assets/brand-logo.svg"
         alt="brand logo"
