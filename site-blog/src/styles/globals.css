@@ -32,8 +32,8 @@
   --radius-sm: calc(0.5rem - 4px);
 
   /* Fonts */
-  --font-sans: "PT Sans Caption", sans-serif;
-  --font-inter: "Inter", sans-serif;
+  --font-sans: var(--font-inter), sans-serif;
+  --font-display: var(--font-pt-sans-caption), sans-serif;
 }
 
 @utility container {
@@ -94,6 +94,13 @@
     font-size: 12px;
     line-height: 150%;
     font-weight: 400;
+  }
+
+  .text-body-tag {
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 400;
+    text-transform: uppercase;
   }
 
   .text-action-md {
