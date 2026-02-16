@@ -4,6 +4,7 @@ import {
   StoreIcon,
 } from 'lucide-react';
 import { PT_Sans_Caption } from 'next/font/google';
+import Image from 'next/image';
 
 const ptSansCaption = PT_Sans_Caption({
   subsets: ['latin'],
@@ -12,8 +13,17 @@ const ptSansCaption = PT_Sans_Caption({
 
 export function SupportSection() {
   return (
-    <section className="bg-linear-to-r from-gray-500 to-gray-700 py-12 md:py-28">
-      <div className="container flex flex-col items-center gap-12">
+    <section className="relative py-12 md:mt-32 md:py-28">
+      <Image
+        src="/assets/background-features.svg"
+        alt="Background features"
+        aria-hidden
+        fill
+        sizes="100vw"
+        className="pointer-events-none object-cover object-center"
+      />
+
+      <div className="container relative flex flex-col items-center gap-12">
         <h2
           className={`${ptSansCaption.className} text-balance text-center text-gray-100 text-heading-xl`}
         >
