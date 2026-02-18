@@ -1,14 +1,8 @@
 import { ArrowRightIcon } from 'lucide-react';
-import { PT_Sans_Caption } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '../ui/button';
-
-const ptSansCaption = PT_Sans_Caption({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
 
 export function FeatureSection() {
   return (
@@ -18,9 +12,7 @@ export function FeatureSection() {
           Simples
         </span>
 
-        <h2
-          className={`${ptSansCaption.className} text-gray-100 text-heading-lg`}
-        >
+        <h2 className={'font-sans text-gray-100 text-heading-lg'}>
           Crie um catálogo de produtos online em poucos minutos
         </h2>
       </div>
@@ -30,9 +22,7 @@ export function FeatureSection() {
           Prático
         </span>
 
-        <h2
-          className={`${ptSansCaption.className} text-gray-100 text-heading-lg`}
-        >
+        <h2 className={'font-sans text-gray-100 text-heading-lg'}>
           Venda para seu público através de uma plataforma única
         </h2>
       </div>
@@ -44,9 +34,7 @@ export function FeatureSection() {
               Personalizável
             </span>
 
-            <h2
-              className={`${ptSansCaption.className} text-gray-100 text-heading-lg`}
-            >
+            <h2 className={'font-sans text-gray-100 text-heading-lg'}>
               Tenha uma loja online personalizada com a cara da sua marca
             </h2>
 

@@ -1,14 +1,8 @@
 import { ArrowRightIcon, StoreIcon } from 'lucide-react';
-import { PT_Sans_Caption } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '../ui/button';
-
-const ptSansCaption = PT_Sans_Caption({
-  subsets: ['latin'],
-  weight: ['700'],
-});
 
 export function CallToAction() {
   return (
@@ -27,9 +21,7 @@ export function CallToAction() {
           <StoreIcon className="h-8 w-8 text-cyan-100" />
         </div>
 
-        <h2
-          className={`${ptSansCaption.className} text-center text-gray-100 text-heading-xl`}
-        >
+        <h2 className={'text-center font-sans text-gray-100 text-heading-xl'}>
           Crie uma loja online e inicie suas vendas ainda hoje
         </h2>
 

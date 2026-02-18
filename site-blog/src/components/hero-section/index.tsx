@@ -1,14 +1,8 @@
 import { ArrowRightIcon, ClockIcon, StoreIcon } from 'lucide-react';
-import { PT_Sans_Caption } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '../ui/button';
-
-const ptSansCaption = PT_Sans_Caption({
-  subsets: ['latin'],
-  weight: ['400', '700'],
-});
 
 export function HeroSection() {
   return (
@@ -17,7 +11,9 @@ export function HeroSection() {
         {/* Text Column */}
         <div className="flex flex-col items-center justify-center gap-4 md:items-start lg:items-start">
           <h1
-            className={`${ptSansCaption.className} text-center text-gray-100 text-heading-hg md:text-left lg:text-left`}
+            className={
+              'text-center font-sans text-gray-100 text-heading-hg md:text-left lg:text-left'
+            }
           >
             Venda seus produtos como afiliado em um único lugar
           </h1>
