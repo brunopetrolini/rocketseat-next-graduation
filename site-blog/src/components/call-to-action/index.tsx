@@ -1,5 +1,4 @@
 import { ArrowRightIcon, StoreIcon } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { Button } from '../ui/button';
@@ -7,14 +6,7 @@ import { Button } from '../ui/button';
 export function CallToAction() {
   return (
     <section className="relative">
-      <Image
-        src="/assets/background-footer.svg"
-        alt="Background footer"
-        aria-hidden
-        fill
-        sizes="100vw"
-        className="pointer-events-none object-cover object-center"
-      />
+      <div className="absolute inset-0 block bg-[url('/assets/background-footer.svg')] bg-center bg-cover bg-no-repeat" />
 
       <div className="container relative z-10 mx-auto flex flex-col items-center gap-8 py-14 md:gap-10 md:pt-20 md:pb-16">
         <div className="absolute top-0 left-2/4 z-99 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan-300 p-4">

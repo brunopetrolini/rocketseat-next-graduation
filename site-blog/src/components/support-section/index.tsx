@@ -3,19 +3,11 @@ import {
   PaintbrushVerticalIcon,
   StoreIcon,
 } from 'lucide-react';
-import Image from 'next/image';
 
 export function SupportSection() {
   return (
-    <section className="relative py-12 md:mt-32 md:py-28">
-      <Image
-        src="/assets/background-features.svg"
-        alt="Background features"
-        aria-hidden
-        fill
-        sizes="100vw"
-        className="pointer-events-none object-cover object-center"
-      />
+    <section className="relative bg-gray-700 py-12 md:mt-32 md:py-28">
+      <div className="absolute inset-0 hidden bg-[url('/assets/background-features.svg')] bg-center bg-cover bg-no-repeat md:block" />
 
       <div className="container relative flex flex-col items-center gap-12">
         <h2
