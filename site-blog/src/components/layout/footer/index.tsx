@@ -1,11 +1,11 @@
 import Link from 'next/link';
 
-import { BrandLogo } from '../brand-logo';
+import { BrandLogo } from '@/components/brand-logo';
 
 export function Footer() {
   return (
     <footer className="bg-gray-500">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-center gap-8 py-8 md:justify-between">
           <BrandLogo />
 
