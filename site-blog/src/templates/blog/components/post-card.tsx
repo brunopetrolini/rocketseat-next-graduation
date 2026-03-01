@@ -1,8 +1,8 @@
 import type { Post } from 'contentlayer/generated';
-import { format } from 'date-fns';
-import { ptBR } from 'date-fns/locale';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { date } from '@/lib/date';
 
 interface PostCardProps {
   post: Post;
@@ -23,7 +23,7 @@ export function PostCard({ post }: PostCardProps) {
       />
 
       <span className="absolute top-0 right-0 rounded-bl-lg bg-gray-600 pt-2.5 pr-3.5 pb-1.5 pl-2.5">
-        {format(new Date(post.date), 'dd/MM/yy', { locale: ptBR })}
+        {date.formatToBRL(post.date)}
       </span>
 
       <div className="flex flex-1 flex-col overflow-x-hidden p-2">
