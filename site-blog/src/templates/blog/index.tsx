@@ -1,3 +1,5 @@
+import { allPosts } from 'contentlayer/generated';
+
 import { SearchInput } from '@/components/ui/search-input';
 import { PostCard } from './components/post-card';
 
@@ -23,9 +25,8 @@ export function BlogPage() {
 
       {/* Posts */}
       <div className="mt-6 mb-20 grid grid-cols-1 gap-4 md:mt-14 md:mb-32 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
-        {Array.from({ length: 3 }).map((_, index) => (
-          // biome-ignore lint/suspicious/noArrayIndexKey: Only for demonstration purposes
-          <PostCard key={index} />
+        {allPosts.map((post) => (
+          <PostCard key={post._id} post={post} />
         ))}
       </div>
     </div>

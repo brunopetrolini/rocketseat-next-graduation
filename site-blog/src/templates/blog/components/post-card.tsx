@@ -1,26 +1,53 @@
+import type { Post } from 'contentlayer/generated';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
+import Image from 'next/image';
 import Link from 'next/link';
 
-export function PostCard() {
+interface PostCardProps {
+  post: Post;
+}
+
+export function PostCard({ post }: PostCardProps) {
   return (
     <Link
-      href="/blog/post"
-      className="max-h-80 rounded-xl border border-gray-400 bg-gray-600 p-8 text-gray-300"
+      href={`/blog/posts/${post.slug}`}
+      className="relative flex h-80 flex-col overflow-hidden rounded-xl border border-gray-400 bg-gray-600 p-2 text-gray-300"
     >
-      <div>
-        <h2 className="font-sans text-gray-100 text-heading-xs">
-          Transformando seu negócio em uma loja virtual
+      <Image
+        src={post.image}
+        alt="Imagem de capa do post"
+        width={400}
+        height={144}
+        className="top-0 left-0 h-36 w-full rounded-lg object-cover"
+      />
+
+      <span className="absolute top-0 right-0 rounded-bl-lg bg-gray-600 pt-2.5 pr-3.5 pb-1.5 pl-2.5">
+        {format(new Date(post.date), 'dd/MM/yy', { locale: ptBR })}
+      </span>
+
+      <div className="flex flex-1 flex-col overflow-x-hidden p-2">
+        <h2 className="text-wrap font-sans text-gray-100 text-heading-xs">
+          {post.title}
         </h2>
 
-        <p className="mt-2 truncate text-wrap text-body-xs">
-          Se você está buscando uma maneira simples e eficaz de vender seus
-          produtos online, o Site.Set é a solução perfeita para você. Criar uma
-          loja virtual de sucesso nunca foi tão fácil. Com nossa plataforma
-          intuitiva, você pode criar um site profissional para sua loja em
-          minutos, sem precisar de conhecimentos técnicos.
+        <p className="mt-2 flex-1 truncate text-wrap text-body-xs">
+          {post.description}
         </p>
-      </div>
 
-      <div className="mt-3 border-gray-400 border-t"></div>
+        <div className="mt-3 border-gray-400 border-t">
+          <div className="mt-3 flex flex-row items-center gap-2">
+            <Image
+              src={post.avatar}
+              alt="Foto do autor do post"
+              width={20}
+              height={20}
+              className="h-5 w-5 rounded-full border border-blue-200"
+            />
+            <span className="text-body-xs text-gray-300">{post.author}</span>
+          </div>
+        </div>
+      </div>
     </Link>
   );
 }
