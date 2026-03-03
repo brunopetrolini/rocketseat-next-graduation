@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 import { date } from '@/lib/date';
 
-interface PostCardProps {
+type PostCardProps = {
   post: Post;
-}
+};
 
 export function PostCard({ post }: PostCardProps) {
   return (

@@ -4,10 +4,10 @@ import type { HTMLAttributes, ReactNode } from 'react';
 
 import { cn } from '@/lib/utils';
 
-interface ActiveLinkProps extends LinkProps {
+type ActiveLinkProps = LinkProps & {
   children: ReactNode;
   className?: HTMLAttributes<HTMLAnchorElement>['className'];
-}
+};
 
 export function ActiveLink({
   children,

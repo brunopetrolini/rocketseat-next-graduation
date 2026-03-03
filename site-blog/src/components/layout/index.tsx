@@ -4,9 +4,9 @@ import type { ReactNode } from 'react';
 import { Footer } from './footer';
 import { Header } from './header';
 
-interface LayoutProps {
+type LayoutProps = {
   children: ReactNode;
-}
+};
 
 const inter = Inter({
   subsets: ['latin'],
