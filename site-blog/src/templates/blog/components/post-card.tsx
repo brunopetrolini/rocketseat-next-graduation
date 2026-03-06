@@ -27,11 +27,11 @@ export function PostCard({ post }: PostCardProps) {
       </span>
 
       <div className="flex flex-1 flex-col overflow-x-hidden p-2">
-        <h2 className="text-wrap font-sans text-gray-100 text-heading-xs">
+        <h2 className="text-wrap font-sans text-gray-100 text-heading-sm">
           {post.title}
         </h2>
 
-        <p className="mt-2 flex-1 truncate text-wrap text-body-xs">
+        <p className="mt-2 flex-1 truncate text-wrap text-body-sm">
           {post.description}
         </p>
 
@@ -44,7 +44,7 @@ export function PostCard({ post }: PostCardProps) {
               height={20}
               className="h-5 w-5 rounded-full border border-blue-200"
             />
-            <span className="text-body-xs text-gray-300">{post.author}</span>
+            <span className="text-body-sm text-gray-300">{post.author}</span>
           </div>
         </div>
       </div>
