@@ -173,7 +173,7 @@ Para outros provedores, consulte a [documentação de deploy do Next.js](https:/
 
 ## 📄 Licença
 
-Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](../LICENSE) para mais detalhes.
+Este projeto está sob a licença **MIT**. O texto completo da licença será adicionado a este repositório.
 
 ---
 
