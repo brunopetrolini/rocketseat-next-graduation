@@ -1,9 +1,19 @@
 import { allPosts } from 'contentlayer/generated';
+import { useRouter } from 'next/router';
 
 import { SearchInput } from '@/components/ui/search-input';
 import { PostCard } from './components/post-card';
 
 export function BlogPage() {
+  const router = useRouter();
+  const query = router.query.q as string;
+
+  const filteredPosts = query
+    ? allPosts.filter((post) => {
+        return post.title.toLowerCase().includes(query.toLowerCase());
+      })
+    : allPosts;
+
   return (
     <div className="container mt-24 flex h-full grow flex-col">
       <header className="flex flex-col gap-6 md:flex-row md:justify-between">
@@ -25,7 +35,7 @@ export function BlogPage() {
 
       {/* Posts */}
       <div className="mt-6 mb-20 grid grid-cols-1 gap-4 md:mt-14 md:mb-32 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
-        {allPosts.map((post) => (
+        {filteredPosts.map((post) => (
           <PostCard key={post._id} post={post} />
         ))}
       </div>
