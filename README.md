@@ -30,7 +30,7 @@ Este monorepo contém os seguintes projetos:
 
 | Projeto | Descrição | Stack |
 |---------|-----------|-------|
-| [`site-blog`](./site-blog) | Landing page de marketing + blog com CMS baseado em Markdown para a plataforma **Site.Set** | Next.js · Tailwind CSS · Contentlayer |
+| [`site-blog`](./site-blog) | Landing page de marketing + blog com CMS baseado em Markdown para a plataforma **Site.Set** | Next.js · Tailwind CSS · Contentlayer2 |
 
 ---
 
@@ -42,7 +42,7 @@ As principais tecnologias utilizadas ao longo dos projetos deste monorepo:
 - **[React 19](https://react.dev/)** — Biblioteca para construção de interfaces de usuário
 - **[TypeScript 5](https://www.typescriptlang.org/)** — Superset tipado de JavaScript
 - **[Tailwind CSS 4](https://tailwindcss.com/)** — Framework CSS utilitário de última geração
-- **[Contentlayer2](https://contentlayer.dev/)** — Transformação de conteúdo Markdown em dados tipados
+- **[Contentlayer2](https://github.com/timlrx/contentlayer2)** — Transformação de conteúdo Markdown em dados tipados
 - **[Radix UI](https://www.radix-ui.com/)** — Componentes acessíveis e sem estilo
 - **[Biome](https://biomejs.dev/)** — Linter e formatador de código ultrarrápido
 - **[date-fns](https://date-fns.org/)** — Biblioteca moderna de utilitários para datas
