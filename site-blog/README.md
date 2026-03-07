@@ -95,10 +95,10 @@ site-blog/
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/brunopetrolini/rocketseat-next-graduation.git
+git clone <repo-url>
 
 # 2. Acesse a pasta do projeto
-cd rocketseat-next-graduation/site-blog
+cd <nome-da-pasta>/site-blog
 
 # 3. Use a versão correta do Node.js (se usar nvm)
 nvm use
@@ -165,7 +165,7 @@ Para criar um novo post, basta adicionar um arquivo `.md` na pasta `posts/` segu
 
 A forma mais simples de fazer o deploy é pela [Vercel](https://vercel.com/), plataforma criada pelos desenvolvedores do Next.js:
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/brunopetrolini/rocketseat-next-graduation/tree/main/site-blog)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrunopetrolini%2Frocketseat-next-graduation%2Ftree%2Fmain%2Fsite-blog)
 
 Para outros provedores, consulte a [documentação de deploy do Next.js](https://nextjs.org/docs/pages/building-your-application/deploying).
 
