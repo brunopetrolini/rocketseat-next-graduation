@@ -38,7 +38,7 @@ Este monorepo contém os seguintes projetos:
 
 As principais tecnologias utilizadas ao longo dos projetos deste monorepo:
 
-- **[Next.js 16](https://nextjs.org/)** — Framework React com App Router, Turbopack e otimizações de imagem
+- **[Next.js 16](https://nextjs.org/)** — Framework React com Pages Router, Turbopack e otimizações de imagem
 - **[React 19](https://react.dev/)** — Biblioteca para construção de interfaces de usuário
 - **[TypeScript 5](https://www.typescriptlang.org/)** — Superset tipado de JavaScript
 - **[Tailwind CSS 4](https://tailwindcss.com/)** — Framework CSS utilitário de última geração
@@ -178,7 +178,7 @@ Contribuições são bem-vindas! Siga os passos abaixo:
 
 ## 📄 Licença
 
-Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+Este projeto está sob a licença **MIT**. Consulte o texto completo da licença MIT em [choosealicense.com](https://choosealicense.com/licenses/mit/).
 
 ---
 
