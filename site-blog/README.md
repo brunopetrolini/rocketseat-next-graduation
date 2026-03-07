@@ -1,40 +1,184 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+<div align="center">
 
-## Getting Started
+# 🚀 Site Blog
 
-First, run the development server:
+**Plataforma de blog e landing page para o Site.Set — crie sua loja online em minutos.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Biome](https://img.shields.io/badge/Biome-2-60A5FA?style=for-the-badge&logo=biome&logoColor=white)](https://biomejs.dev/)
+
+</div>
+
+---
+
+## 📖 Sobre o Projeto
+
+O **Site Blog** é uma aplicação web moderna que combina uma **landing page profissional** com um **sistema de blog completo**, desenvolvida com as tecnologias mais recentes do ecossistema JavaScript.
+
+O projeto foi construído para o **Site.Set**, uma plataforma que ajuda empreendedores a criarem lojas virtuais e negócios de afiliados de forma simples e rápida. O blog publica artigos sobre e-commerce, dicas de negócios e estratégias de vendas online.
+
+---
+
+## ✨ Funcionalidades
+
+- 🏠 **Landing Page** com seções de marketing otimizadas para conversão
+  - Hero com chamada para ação principal
+  - Seção de recursos e benefícios
+  - Seção de suporte ao cliente
+  - Histórias de sucesso de clientes
+  - Call-to-Action final
+- 📝 **Blog com busca em tempo real** via parâmetros de URL
+- 🎨 **Design responsivo** (mobile-first) com Tailwind CSS
+- ⚡ **Conteúdo gerenciado por Markdown** — sem banco de dados necessário
+- 🔍 **SEO-friendly** com metadados otimizados
+- 🖼️ **Otimização de imagens** com Next.js Image
+- 🔤 **Fontes otimizadas** (Inter + PT Sans Caption via Google Fonts)
+
+---
+
+## 🛠️ Stack Tecnológica
+
+| Categoria | Tecnologia |
+|-----------|-----------|
+| **Framework** | [Next.js 16](https://nextjs.org/) com Pages Router |
+| **UI Library** | [React 19](https://react.dev/) |
+| **Linguagem** | [TypeScript 5](https://www.typescriptlang.org/) |
+| **Estilização** | [Tailwind CSS 4](https://tailwindcss.com/) |
+| **Componentes** | [Radix UI](https://www.radix-ui.com/) + [class-variance-authority](https://cva.style/) |
+| **Ícones** | [Lucide React](https://lucide.dev/) |
+| **CMS** | [Contentlayer2](https://contentlayer.dev/) (Markdown → TypeScript) |
+| **Datas** | [date-fns 4](https://date-fns.org/) |
+| **Linter/Formatter** | [Biome 2](https://biomejs.dev/) |
+
+---
+
+## 📁 Estrutura do Projeto
+
+```
+site-blog/
+├── posts/                      # 📝 Artigos do blog (Markdown)
+├── public/                     # 🖼️ Arquivos estáticos (SVGs, favicon)
+├── src/
+│   ├── components/             # 🧩 Componentes reutilizáveis
+│   │   ├── active-link/        #    Link de navegação ativo
+│   │   ├── brand-logo/         #    Logo da marca
+│   │   ├── layout/             #    Header, Footer e Layout principal
+│   │   └── ui/                 #    Button, SearchInput
+│   ├── lib/                    # 🔧 Utilitários (formatação de datas, CSS)
+│   ├── pages/                  # 📄 Páginas Next.js (Pages Router)
+│   │   ├── index.tsx           #    Home / Landing Page
+│   │   ├── blog/               #    Listagem do blog
+│   │   └── api/                #    Rotas de API
+│   ├── styles/                 # 🎨 Estilos globais (Tailwind CSS)
+│   └── templates/              # 📐 Templates de página
+│       ├── blog/               #    Template do blog com busca
+│       └── landing-page/       #    Template da landing page
+│           └── sections/       #    Hero, Feature, Support, CTA...
+├── contentlayer.config.ts      # ⚙️ Configuração do Contentlayer
+├── next.config.ts              # ⚙️ Configuração do Next.js
+└── biome.json                  # ⚙️ Configuração do Biome
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## 🚀 Como Executar
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Pré-requisitos
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- [Node.js](https://nodejs.org/) **v24.14.0** (recomendado via [nvm](https://github.com/nvm-sh/nvm))
+- [npm](https://www.npmjs.com/)
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Instalação
 
-## Learn More
+```bash
+# 1. Clone o repositório
+git clone https://github.com/brunopetrolini/rocketseat-next-graduation.git
 
-To learn more about Next.js, take a look at the following resources:
+# 2. Acesse a pasta do projeto
+cd rocketseat-next-graduation/site-blog
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+# 3. Use a versão correta do Node.js (se usar nvm)
+nvm use
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+# 4. Instale as dependências
+npm install
+```
 
-## Deploy on Vercel
+### Execução
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Modo de desenvolvimento (com hot-reload)
+npm run dev
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+# Build de produção
+npm run build
+
+# Iniciar servidor de produção (após o build)
+npm start
+```
+
+Acesse [http://localhost:3000](http://localhost:3000) no navegador para visualizar a aplicação.
+
+---
+
+## 🧹 Qualidade de Código
+
+O projeto utiliza o [Biome](https://biomejs.dev/) como linter e formatter unificado:
+
+```bash
+# Verificar problemas de lint e formatação
+npm run lint
+
+# Formatar o código automaticamente
+npm run format
+```
+
+---
+
+## 📝 Gerenciamento de Conteúdo
+
+Os posts do blog são arquivos **Markdown** localizados na pasta `posts/`. O [Contentlayer2](https://contentlayer.dev/) transforma esses arquivos em dados TypeScript type-safe durante o build.
+
+### Estrutura de um Post
+
+```markdown
+---
+title: Título do artigo
+date: 2024-12-20 10:20:00
+description: Breve descrição do artigo
+image: https://url-da-imagem-de-capa.com
+author: Nome do Autor
+avatar: https://url-do-avatar.com
+---
+
+Conteúdo do artigo em Markdown...
+```
+
+Para criar um novo post, basta adicionar um arquivo `.md` na pasta `posts/` seguindo a estrutura acima.
+
+---
+
+## 🌐 Deploy
+
+A forma mais simples de fazer o deploy é pela [Vercel](https://vercel.com/), plataforma criada pelos desenvolvedores do Next.js:
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/brunopetrolini/rocketseat-next-graduation/tree/main/site-blog)
+
+Para outros provedores, consulte a [documentação de deploy do Next.js](https://nextjs.org/docs/pages/building-your-application/deploying).
+
+---
+
+## 📄 Licença
+
+Este projeto está sob a licença **MIT**. Veja o arquivo [LICENSE](../LICENSE) para mais detalhes.
+
+---
+
+<div align="center">
+
+Feito com ❤️ durante a graduação na [Rocketseat](https://rocketseat.com.br) 🚀
+
+</div>
