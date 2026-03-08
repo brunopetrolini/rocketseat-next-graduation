@@ -51,7 +51,7 @@ export default function PostPage() {
           {/* Post Content */}
           <div className="flex flex-col gap-6 p-6 pt-8 md:gap-8 md:p-16 md:pt-12">
             {/* Post Header */}
-            <div className="flex flex-col gap-6 md:gap-8">
+            <header className="flex flex-col gap-6 md:gap-8">
               <h2 className="font-sans text-gray-100 text-heading-md md:text-heading-xl">
                 {post.title}
               </h2>
@@ -72,7 +72,7 @@ export default function PostPage() {
                   <span className="text-body-xs text-gray-300">{`Publicado em ${date.formatToBRL(post.date)}`}</span>
                 </div>
               </div>
-            </div>
+            </header>
           </div>
         </article>
       </div>
