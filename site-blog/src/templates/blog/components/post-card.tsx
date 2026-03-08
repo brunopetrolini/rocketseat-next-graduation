@@ -11,7 +11,7 @@ type PostCardProps = {
 export function PostCard({ post }: PostCardProps) {
   return (
     <Link
-      href={`/blog/posts/${post.slug}`}
+      href={`/blog/${post.slug}`}
       className="relative flex h-80 flex-col overflow-hidden rounded-xl border border-gray-400 bg-gray-600 p-2 text-gray-300 transition-colors duration-300 hover:border-blue-300"
     >
       <Image
