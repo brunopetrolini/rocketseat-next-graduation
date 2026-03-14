@@ -38,7 +38,7 @@ export function HeroSection() {
             </div>
           </div>
 
-          <div className="mt-5 flex flex-col items-start gap-2 md:items-start lg:items-start">
+          <div className="mt-5 flex flex-col items-center gap-2 md:items-start lg:items-start">
             <Button className="w-fit text-white" asChild>
               <Link href="/create-store">
                 Criar loja grátis
