@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import { Markdown } from '@/components/markdown';
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -73,6 +74,10 @@ export default function PostPage() {
                 </div>
               </div>
             </header>
+
+            <div className="prose prose-invert max-w-none">
+              <Markdown content={post.body.raw} />
+            </div>
           </div>
         </article>
       </div>
