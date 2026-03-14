@@ -4,19 +4,17 @@ import {
   StoreIcon,
 } from 'lucide-react';
 
+import { SectionHeading } from '@/components/section-heading';
+
 export function SupportSection() {
   return (
     <section className="relative bg-gray-700 py-12 md:mt-32 md:py-28">
       <div className="absolute inset-0 hidden bg-[url('/assets/background-features.svg')] bg-center bg-cover bg-no-repeat md:block" />
 
       <div className="container relative flex flex-col items-center gap-12">
-        <h2
-          className={
-            'text-balance text-center font-sans text-gray-100 text-heading-xl'
-          }
-        >
+        <SectionHeading className="text-balance text-center">
           Sua loja de afiliados, simples, do jeito que deveria ser
-        </h2>
+        </SectionHeading>
 
         <div className="grid gap-6 md:grid-cols-3">
           {/* First Card */}

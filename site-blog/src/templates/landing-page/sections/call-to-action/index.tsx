@@ -1,6 +1,7 @@
 import { ArrowRightIcon, StoreIcon } from 'lucide-react';
 import Link from 'next/link';
 
+import { SectionHeading } from '@/components/section-heading';
 import { Button } from '@/components/ui/button';
 
 export function CallToAction() {
@@ -13,9 +14,9 @@ export function CallToAction() {
           <StoreIcon className="h-8 w-8 text-cyan-100" />
         </div>
 
-        <h2 className={'text-center font-sans text-gray-100 text-heading-xl'}>
+        <SectionHeading className="text-center">
           Crie uma loja online e inicie suas vendas ainda hoje
-        </h2>
+        </SectionHeading>
 
         <Button className="w-fit text-white" asChild>
           <Link href="/create-store">

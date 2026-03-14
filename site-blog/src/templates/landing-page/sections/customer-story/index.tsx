@@ -1,4 +1,5 @@
-import Image from 'next/image';
+import { AuthorInfo } from '@/components/author-info';
+import { SectionHeading } from '@/components/section-heading';
 
 const customerStories = [
   {
@@ -26,9 +27,9 @@ const customerStories = [
 export function CustomerStorySection() {
   return (
     <section className="container space-y-12 py-20 md:pt-32 md:pb-40">
-      <h2 className={'text-center font-sans text-gray-100 text-heading-xl'}>
+      <SectionHeading className="text-center">
         Quem utiliza, aprova!
-      </h2>
+      </SectionHeading>
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {customerStories.map(({ id, content, author }) => (
@@ -38,22 +39,12 @@ export function CustomerStorySection() {
           >
             <p className="text-body-md text-gray-200 italic">{content}</p>
 
-            <div className="flex flex-row items-center gap-3">
-              <Image
-                src={author.avatar}
-                alt={`${author.name}, ${author.role}`}
-                width={96}
-                height={96}
-                className="h-9 w-9 overflow-hidden rounded-full border border-blue-200 object-cover"
-              />
-
-              <div className="flex flex-col gap-1">
-                <span className="font-medium text-gray-200 text-sm">
-                  {author.name}
-                </span>
-                <small className="text-gray-300 text-xs">{author.role}</small>
-              </div>
-            </div>
+            <AuthorInfo
+              avatarUrl={author.avatar}
+              avatarAlt={`${author.name}, ${author.role}`}
+              name={author.name}
+              subtitle={author.role}
+            />
           </div>
         ))}
       </div>
