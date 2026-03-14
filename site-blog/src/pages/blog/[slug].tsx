@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import { AuthorInfo } from '@/components/author-info';
 import { Markdown } from '@/components/markdown';
 import {
   Breadcrumb,
@@ -57,22 +58,12 @@ export default function PostPage() {
                 {post.title}
               </h2>
 
-              <div className="flex flex-row items-center gap-3">
-                <Image
-                  src={post.avatar}
-                  alt={post.author}
-                  width={36}
-                  height={36}
-                  className="size-9 rounded-full border border-blue-200 object-cover"
-                />
-
-                <div className="flex flex-col gap-0.5">
-                  <span className="text-body-sm text-gray-200">
-                    {post.author}
-                  </span>
-                  <span className="text-body-xs text-gray-300">{`Publicado em ${date.formatToBRL(post.date)}`}</span>
-                </div>
-              </div>
+              <AuthorInfo
+                avatarUrl={post.avatar}
+                avatarAlt={post.author}
+                name={post.author}
+                subtitle={`Publicado em ${date.formatToBRL(post.date)}`}
+              />
             </header>
 
             <div className="prose prose-invert max-w-none">

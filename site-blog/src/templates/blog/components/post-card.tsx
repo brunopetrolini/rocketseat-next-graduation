@@ -2,6 +2,7 @@ import type { Post } from 'contentlayer/generated';
 import Image from 'next/image';
 import Link from 'next/link';
 
+import { AuthorInfo } from '@/components/author-info';
 import { date } from '@/lib/date';
 
 type PostCardProps = {
@@ -36,15 +37,13 @@ export function PostCard({ post }: PostCardProps) {
         </p>
 
         <div className="mt-3 border-gray-400 border-t">
-          <div className="mt-3 flex flex-row items-center gap-2">
-            <Image
-              src={post.avatar}
-              alt="Foto do autor do post"
-              width={20}
-              height={20}
-              className="h-5 w-5 rounded-full border border-blue-200"
+          <div className="mt-3">
+            <AuthorInfo
+              avatarUrl={post.avatar}
+              avatarAlt="Foto do autor do post"
+              name={post.author}
+              size="sm"
             />
-            <span className="text-body-sm text-gray-300">{post.author}</span>
           </div>
         </div>
       </div>

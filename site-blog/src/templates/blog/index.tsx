@@ -3,6 +3,7 @@ import { HeartCrackIcon } from 'lucide-react';
 import { useRouter } from 'next/router';
 
 import { SearchInput } from '@/components/ui/search-input';
+import { Tag } from '@/components/ui/tag';
 import { PostCard } from './components/post-card';
 
 export function BlogPage() {
@@ -21,9 +22,7 @@ export function BlogPage() {
       <header className="flex flex-col gap-6 md:flex-row md:justify-between">
         <div className="flex flex-col gap-3 md:max-w-md">
           {/* Tag */}
-          <span className="w-fit rounded-sm bg-cyan-300 px-3 py-1.5 text-body-tag text-cyan-100">
-            Blog
-          </span>
+          <Tag variant="cyan">Blog</Tag>
 
           {/* Title */}
           <h1 className="text-left font-sans text-gray-100 text-heading-lg md:text-heading-xl">
