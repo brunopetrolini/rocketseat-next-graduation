@@ -3,7 +3,7 @@ import type { GetStaticPaths, GetStaticProps } from 'next/types';
 
 import { PostPage, type PostPageProps } from '@/templates/blog/post';
 
-export const getStaticPaths = (() => {
+export const getStaticPaths = (async () => {
   const sortedAndRecentPosts = allPosts
     .sort((a, b) => b.date.localeCompare(a.date))
     .slice(0, 5);
@@ -17,7 +17,7 @@ export const getStaticPaths = (() => {
   };
 }) satisfies GetStaticPaths;
 
-export const getStaticProps = ((context) => {
+export const getStaticProps = (async (context) => {
   const slug = context.params?.slug;
   const post = allPosts.find((post) => post.slug === slug);
 

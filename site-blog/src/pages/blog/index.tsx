@@ -7,7 +7,7 @@ export default function Blog({ posts }: BlogPageProps) {
   return <BlogPage posts={posts} />;
 }
 
-export const getStaticProps = (() => {
+export const getStaticProps = (async () => {
   const sortedPosts = allPosts.sort((a, b) => b.date.localeCompare(a.date));
 
   return {
