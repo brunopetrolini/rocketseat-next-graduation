@@ -1,21 +1,21 @@
-import type { Post } from "contentlayer/generated";
-import { allPosts } from "contentlayer/generated";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect } from "react";
+import type { Post } from 'contentlayer/generated';
+import { allPosts } from 'contentlayer/generated';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 
-import { Markdown } from "@/components/markdown";
+import { Markdown } from '@/components/markdown';
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import { Button } from "@/components/ui/button";
-import { useShare } from "@/hooks";
-import { date } from "@/lib/date";
+} from '@/components/ui/breadcrumb';
+import { Button } from '@/components/ui/button';
+import { useShare } from '@/hooks';
+import { date } from '@/lib/date';
 
 export default function PostPage() {
   const router = useRouter();
@@ -26,7 +26,7 @@ export default function PostPage() {
 
   useEffect(() => {
     if (router.isReady && !post) {
-      router.replace("/blog");
+      router.replace('/blog');
     }
   }, [router.isReady, post, router]);
 
@@ -104,7 +104,7 @@ function PostContent({ post }: { post: Post }) {
         </article>
 
         <aside className="space-y-6">
-          <div className="rounded-lg bg-gray-700 p-4 md:p-6">
+          <div className="rounded-lg bg-gray-700 py-4 md:px-6 md:py-0">
             <h2 className="mb-4 text-gray-100 text-heading-xs">Compartilhar</h2>
 
             <div className="space-y-3">
