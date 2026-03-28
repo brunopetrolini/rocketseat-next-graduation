@@ -43,37 +43,55 @@ function PostContent({ post }: { post: Post }) {
   });
 
   return (
-    <main className="container mt-24 flex flex-col gap-5 md:gap-8">
+    <main className="container mt-24 flex flex-col gap-5 lg:gap-8">
       {/* Navigation */}
-      <Breadcrumb className="text-action-sm text-gray-100">
-        <BreadcrumbList>
-          <BreadcrumbItem>
-            <BreadcrumbLink asChild>
-              <Link href="/blog">Blog</Link>
-            </BreadcrumbLink>
-          </BreadcrumbItem>
+      <div className="flex flex-row items-center justify-between">
+        <Breadcrumb className="text-action-sm text-gray-100">
+          <BreadcrumbList>
+            <BreadcrumbItem>
+              <BreadcrumbLink asChild>
+                <Link href="/blog">Blog</Link>
+              </BreadcrumbLink>
+            </BreadcrumbItem>
 
-          <BreadcrumbSeparator className="text-gray-300" />
+            <BreadcrumbSeparator className="text-gray-300" />
 
-          <BreadcrumbItem>
-            <span className="text-blue-200">{post.title}</span>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+            <BreadcrumbItem>
+              <span className="text-blue-200 md:hidden">Post</span>
+              <span className="hidden text-blue-200 md:block">
+                {post.title}
+              </span>
+            </BreadcrumbItem>
+          </BreadcrumbList>
+        </Breadcrumb>
+
+        {/* Share Actions - Only in small and medium screens */}
+        <aside className="flex justify-end gap-2 lg:hidden">
+          {shareButtons.map((shareOption) => (
+            <Button
+              key={shareOption.provider}
+              variant="outline"
+              onClick={shareOption.action}
+            >
+              {shareOption.icon}
+            </Button>
+          ))}
+        </aside>
+      </div>
 
       {/* Content */}
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_240px]">
         {/* Post */}
         <article className="flex flex-col overflow-hidden rounded-xl border border-gray-400 bg-gray-600">
-          <figure className="relative aspect-16/10 max-h-33 w-full overflow-hidden md:max-h-66">
+          <figure className="relative aspect-16/10 max-h-33 w-full overflow-hidden lg:max-h-66">
             <Image src={post.image} alt={post.title} fill objectFit="cover" />
           </figure>
 
           {/* Post Content */}
-          <div className="flex flex-col gap-6 p-6 pt-8 md:gap-8 md:p-16 md:pt-12">
+          <div className="flex flex-col gap-6 p-6 pt-8 lg:gap-8 lg:p-16 lg:pt-12">
             {/* Post Header */}
-            <header className="flex flex-col gap-6 md:gap-8">
-              <h2 className="font-sans text-gray-100 text-heading-md md:text-heading-xl">
+            <header className="flex flex-col gap-6 lg:gap-8">
+              <h2 className="font-sans text-gray-100 text-heading-md lg:text-heading-xl">
                 {post.title}
               </h2>
 
@@ -101,23 +119,22 @@ function PostContent({ post }: { post: Post }) {
           </div>
         </article>
 
-        <aside className="space-y-6">
-          <div className="rounded-lg bg-gray-700 py-4 md:px-6 md:py-0">
-            <h2 className="mb-4 text-gray-100 text-heading-xs">Compartilhar</h2>
+        {/* Share Actions - Only in large screens */}
+        <aside className="hidden space-y-6 px-6 py-0 lg:block">
+          <h2 className="mb-4 text-gray-100 text-heading-xs">Compartilhar</h2>
 
-            <div className="space-y-3">
-              {shareButtons.map((shareOption) => (
-                <Button
-                  key={shareOption.provider}
-                  variant="outline"
-                  className="w-full justify-start"
-                  onClick={shareOption.action}
-                >
-                  {shareOption.icon}
-                  {shareOption.name}
-                </Button>
-              ))}
-            </div>
+          <div className="space-y-2">
+            {shareButtons.map((shareOption) => (
+              <Button
+                key={shareOption.provider}
+                variant="outline"
+                className="w-full justify-start"
+                onClick={shareOption.action}
+              >
+                {shareOption.icon}
+                {shareOption.name}
+              </Button>
+            ))}
           </div>
         </aside>
       </div>
