@@ -1,4 +1,4 @@
-import { allPosts, type Post } from 'contentlayer/generated';
+import type { Post } from 'contentlayer/generated';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -16,11 +16,12 @@ import { Button } from '@/components/ui/button';
 import { useShare } from '@/hooks';
 import { date } from '@/lib/date';
 
-export function PostPage() {
+export type PostPageProps = {
+  post: Post;
+};
+
+export function PostPage({ post }: PostPageProps) {
   const router = useRouter();
-  const post = allPosts.find(
-    (post) => post.slug === (router.query.slug as string),
-  );
 
   useEffect(() => {
     if (router.isReady && !post) {
