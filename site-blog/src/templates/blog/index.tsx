@@ -1,19 +1,23 @@
-import { allPosts } from 'contentlayer/generated';
+import type { Post } from 'contentlayer/generated';
 import { HeartCrackIcon } from 'lucide-react';
 import { useRouter } from 'next/router';
 
 import { SearchInput } from '@/components/ui/search-input';
 import { PostCard } from './components/post-card';
 
-export function BlogPage() {
+export type BlogPageProps = {
+  posts: Post[];
+};
+
+export function BlogPage({ posts }: BlogPageProps) {
   const router = useRouter();
   const query = router.query.q as string;
 
   const filteredPosts = query
-    ? allPosts.filter((post) => {
+    ? posts.filter((post) => {
         return post.title.toLowerCase().includes(query.toLowerCase());
       })
-    : allPosts;
+    : posts;
   const hasPosts = filteredPosts.length > 0;
 
   return (
