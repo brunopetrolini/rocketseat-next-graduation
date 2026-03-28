@@ -1,17 +1,21 @@
-import { allPosts } from 'contentlayer/generated';
-import Image from 'next/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
+import type { Post } from "contentlayer/generated";
+import { allPosts } from "contentlayer/generated";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
-import { Markdown } from '@/components/markdown';
+import { Markdown } from "@/components/markdown";
 import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from '@/components/ui/breadcrumb';
-import { date } from '@/lib/date';
+} from "@/components/ui/breadcrumb";
+import { Button } from "@/components/ui/button";
+import { useShare } from "@/hooks";
+import { date } from "@/lib/date";
 
 export default function PostPage() {
   const router = useRouter();
@@ -20,7 +24,25 @@ export default function PostPage() {
     (post) => post.slug === (router.query.slug as string),
   );
 
-  if (!post) return router.replace('/blog');
+  useEffect(() => {
+    if (router.isReady && !post) {
+      router.replace("/blog");
+    }
+  }, [router.isReady, post, router]);
+
+  if (!post) return null;
+
+  return <PostContent post={post} />;
+}
+
+function PostContent({ post }: { post: Post }) {
+  const router = useRouter();
+
+  const { shareButtons } = useShare({
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`,
+    title: post.title,
+    text: post.description,
+  });
 
   return (
     <main className="container mt-24 flex flex-col gap-5 md:gap-8">
@@ -45,7 +67,7 @@ export default function PostPage() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_240px]">
         {/* Post */}
         <article className="flex flex-col overflow-hidden rounded-xl border border-gray-400 bg-gray-600">
-          <figure className="relative aspect-16/10 max-h-[132px] w-full overflow-hidden md:max-h-[264px]">
+          <figure className="relative aspect-16/10 max-h-33 w-full overflow-hidden md:max-h-66">
             <Image src={post.image} alt={post.title} fill objectFit="cover" />
           </figure>
 
@@ -80,6 +102,26 @@ export default function PostPage() {
             </div>
           </div>
         </article>
+
+        <aside className="space-y-6">
+          <div className="rounded-lg bg-gray-700 p-4 md:p-6">
+            <h2 className="mb-4 text-gray-100 text-heading-xs">Compartilhar</h2>
+
+            <div className="space-y-3">
+              {shareButtons.map((shareOption) => (
+                <Button
+                  key={shareOption.provider}
+                  variant="outline"
+                  className="w-full justify-start"
+                  onClick={shareOption.action}
+                >
+                  {shareOption.icon}
+                  {shareOption.name}
+                </Button>
+              ))}
+            </div>
+          </div>
+        </aside>
       </div>
     </main>
   );
