@@ -1,8 +1,10 @@
 import '@/styles/globals.css';
 
+import type { Metadata } from 'next';
+
 import { Layout } from '@/components/layout';
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Site Blog',
   description: 'Site Blog',
 };
