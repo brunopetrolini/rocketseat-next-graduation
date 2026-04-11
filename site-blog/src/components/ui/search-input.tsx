@@ -1,10 +1,13 @@
+'use client';
+
 import { CircleXIcon, SearchIcon } from 'lucide-react';
-import { useRouter } from 'next/router';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { type ChangeEvent, type FormEvent, useCallback } from 'react';
 
 export function SearchInput() {
   const router = useRouter();
-  const query = (router.query.q as string) ?? '';
+  const searchParams = useSearchParams();
+  const query = searchParams?.get('q') ?? '';
 
   const handleSearch = useCallback(
     (e: FormEvent) => {
@@ -19,14 +22,11 @@ export function SearchInput() {
 
   const handleQueryChange = (e: ChangeEvent<HTMLInputElement>) => {
     const newQuery = e.target.value;
-    router.push(`/blog?q=${encodeURIComponent(newQuery)}`, undefined, {
-      shallow: true,
-      scroll: false,
-    });
+    router.push(`/blog?q=${encodeURIComponent(newQuery)}`, { scroll: false });
   };
 
   const resetSearch = () => {
-    router.push('/blog', undefined, { shallow: true, scroll: false });
+    router.push('/blog', { scroll: false });
   };
 
   return (

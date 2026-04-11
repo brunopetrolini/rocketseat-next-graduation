@@ -1,6 +1,8 @@
+'use client';
+
 import type { Post } from 'contentlayer/generated';
 import { HeartCrackIcon } from 'lucide-react';
-import { useRouter } from 'next/router';
+import { useSearchParams } from 'next/navigation';
 
 import { SearchInput } from '@/components/ui/search-input';
 import { PostCard } from './components/post-card';
@@ -10,8 +12,8 @@ export type BlogPageProps = {
 };
 
 export function BlogPage({ posts }: BlogPageProps) {
-  const router = useRouter();
-  const query = router.query.q as string;
+  const searchParams = useSearchParams();
+  const query = searchParams?.get('q') ?? '';
 
   const filteredPosts = query
     ? posts.filter((post) => {
