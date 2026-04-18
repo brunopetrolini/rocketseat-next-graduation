@@ -7,6 +7,12 @@ type PostProps = {
   params: Promise<{ slug: string }>;
 };
 
+export async function generateStaticParams() {
+  return allPosts.map((post) => ({
+    slug: post.slug,
+  }));
+}
+
 export default async function Post({ params }: PostProps) {
   const { slug } = await params;
   const post = allPosts.find((post) => post.slug === slug);
