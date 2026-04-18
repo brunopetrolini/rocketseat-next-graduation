@@ -5,8 +5,9 @@ import type { Metadata } from 'next';
 import { Layout } from '@/components/layout';
 
 export const metadata: Metadata = {
-  title: 'Site Blog',
-  description: 'Site Blog',
+  title: 'Site.Set Blog – E-commerce, SEO e Marketing Digital',
+  description:
+    'Aprenda estratégias de e-commerce, SEO e marketing digital para vender mais e fazer sua loja virtual crescer.',
 };
 
 export default function RootLayout({
