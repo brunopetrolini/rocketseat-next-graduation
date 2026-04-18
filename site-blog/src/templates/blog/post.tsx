@@ -1,8 +1,9 @@
+'use client';
+
 import type { Post } from 'contentlayer/generated';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 
 import { Markdown } from '@/components/markdown';
 import {
@@ -21,24 +22,15 @@ export type PostPageProps = {
 };
 
 export function PostPage({ post }: PostPageProps) {
-  const router = useRouter();
-
-  useEffect(() => {
-    if (router.isReady && !post) {
-      router.replace('/blog');
-    }
-  }, [router.isReady, post, router]);
-
   if (!post) return null;
-
   return <PostContent post={post} />;
 }
 
 function PostContent({ post }: { post: Post }) {
-  const router = useRouter();
+  const pathname = usePathname();
 
   const { shareButtons } = useShare({
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}${router.asPath}`,
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}${pathname}`,
     title: post.title,
     text: post.description,
   });
