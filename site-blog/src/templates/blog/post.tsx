@@ -1,9 +1,6 @@
-'use client';
-
 import type { Post } from 'contentlayer/generated';
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 
 import { Markdown } from '@/components/markdown';
 import {
@@ -13,10 +10,8 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from '@/components/ui/breadcrumb';
-import { Button } from '@/components/ui/button';
-import { useShare } from '@/hooks';
 import { date } from '@/lib/date';
-
+import { PostShare } from './components/post-share';
 export type PostPageProps = {
   post: Post;
 };
@@ -27,14 +22,6 @@ export function PostPage({ post }: PostPageProps) {
 }
 
 function PostContent({ post }: { post: Post }) {
-  const pathname = usePathname();
-
-  const { shareButtons } = useShare({
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}${pathname}`,
-    title: post.title,
-    text: post.description,
-  });
-
   return (
     <main className="container mt-24 flex flex-col gap-5 lg:gap-8">
       {/* Navigation */}
@@ -58,18 +45,10 @@ function PostContent({ post }: { post: Post }) {
           </BreadcrumbList>
         </Breadcrumb>
 
-        {/* Share Actions - Only in small and medium screens */}
-        <aside className="flex justify-end gap-2 lg:hidden">
-          {shareButtons.map((shareOption) => (
-            <Button
-              key={shareOption.provider}
-              variant="outline"
-              onClick={shareOption.action}
-            >
-              {shareOption.icon}
-            </Button>
-          ))}
-        </aside>
+        {/* Post Share - Only in small and medium screens */}
+        <div className="lg:hidden">
+          <PostShare post={post} />
+        </div>
       </div>
 
       {/* Content */}
@@ -112,24 +91,10 @@ function PostContent({ post }: { post: Post }) {
           </div>
         </article>
 
-        {/* Share Actions - Only in large screens */}
-        <aside className="hidden space-y-6 px-6 py-0 lg:block">
-          <h2 className="mb-4 text-gray-100 text-heading-xs">Compartilhar</h2>
-
-          <div className="space-y-2">
-            {shareButtons.map((shareOption) => (
-              <Button
-                key={shareOption.provider}
-                variant="outline"
-                className="w-full justify-start"
-                onClick={shareOption.action}
-              >
-                {shareOption.icon}
-                {shareOption.name}
-              </Button>
-            ))}
-          </div>
-        </aside>
+        {/* Post Share - Only in large screens */}
+        <div className="hidden lg:block">
+          <PostShare post={post} />
+        </div>
       </div>
     </main>
   );
