@@ -7,6 +7,8 @@ type PostProps = {
   params: Promise<{ slug: string }>;
 };
 
+export const dynamicParams = true;
+
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
     slug: post.slug,
