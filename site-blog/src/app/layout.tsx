@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import { Layout } from '@/components/layout';
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://blog.apollum.tech'),
   title: 'Site.Set Blog – E-commerce, SEO e Marketing Digital',
   description:
     'Aprenda estratégias de e-commerce, SEO e marketing digital para vender mais e fazer sua loja virtual crescer.',
@@ -13,13 +14,13 @@ export const metadata: Metadata = {
     title: 'Site.Set Blog – E-commerce, SEO e Marketing Digital',
     description:
       'Aprenda estratégias de e-commerce, SEO e marketing digital para vender mais e fazer sua loja virtual crescer.',
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+    url: '/',
     siteName: 'Site.Set Blog',
     locale: 'pt_BR',
     type: 'website',
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/og-image.png`,
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Site.Set Blog',
