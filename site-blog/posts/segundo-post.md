@@ -2,9 +2,9 @@
 title: Como aumentar as vendas com estratégias de SEO
 date: 2025-01-10 09:00:00
 description: Descubra como otimizar seu site para os motores de busca e atrair mais clientes para o seu negócio online.
-image: https://images.unsplash.com/photo-1562577309-4932fdd64cd1
+image: https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=1200&h=630&auto=format&fit=crop
 author: Jordan Mercer
-avatar: https://images.unsplash.com/photo-1535713875002-d1d0cf377fde
+avatar: https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=36&h=36&auto=format&fit=crop
 ---
 
 O SEO (Search Engine Optimization) é uma das ferramentas mais poderosas para quem deseja crescer no ambiente digital. Com as estratégias certas, é possível atrair mais visitantes ao seu site de forma orgânica, sem precisar investir grandes quantias em anúncios pagos.

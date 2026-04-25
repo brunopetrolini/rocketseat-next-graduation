@@ -2,9 +2,9 @@
 title: "E-mail marketing: como usar para aumentar suas vendas"
 date: 2025-03-28 10:00:00
 description: O e-mail marketing continua sendo uma das estratégias com maior retorno sobre investimento no marketing digital. Saiba como aplicá-lo corretamente.
-image: https://images.unsplash.com/photo-1557200134-90327ee9fafa
+image: https://images.unsplash.com/photo-1557200134-90327ee9fafa?w=1200&h=630&auto=format&fit=crop
 author: Dana Rocha
-avatar: https://images.unsplash.com/photo-1544005313-94ddf0286df2
+avatar: https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=36&h=36&auto=format&fit=crop
 ---
 
 Apesar do crescimento das redes sociais, o e-mail marketing segue como uma das ferramentas mais eficazes do marketing digital. Diferente de outras plataformas, o e-mail permite uma comunicação direta e personalizada com quem já demonstrou interesse na sua marca.

@@ -2,9 +2,9 @@
 title: A importância do atendimento ao cliente no e-commerce
 date: 2025-01-25 14:00:00
 description: Entenda por que um bom atendimento ao cliente é o diferencial que faz consumidores voltarem à sua loja e indicarem sua marca.
-image: https://images.unsplash.com/photo-1521737604893-d14cc237f11d
+image: https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1200&h=630&auto=format&fit=crop
 author: Riley Thompson
-avatar: https://images.unsplash.com/photo-1494790108377-be9c29b29330
+avatar: https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=36&h=36&auto=format&fit=crop
 ---
 
 No mundo do comércio eletrônico, onde a concorrência é acirrada e as opções são infinitas, o atendimento ao cliente se tornou um dos principais fatores de diferenciação entre as lojas online. Clientes bem atendidos não apenas voltam a comprar, como também se tornam promotores da sua marca.

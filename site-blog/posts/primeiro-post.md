@@ -2,9 +2,9 @@
 title: Transformando seu negócio em uma loja virtual
 date: 2024-12-20 10:20:00
 description: Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site.Set é a solução perfeita para você.
-image: https://images.unsplash.com/photo-1472851294608-062f824d29cc
+image: https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=1200&h=630&auto=format&fit=crop
 author: Aspen Dokidis
-avatar: https://images.unsplash.com/photo-1664575602554-2087b04935a5
+avatar: https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=36&h=36&auto=format&fit=crop
 ---
 
 Se você está buscando uma maneira simples e eficaz de vender seus produtos online, o Site.Set é a solução perfeita para você. Criar uma loja virtual de sucesso nunca foi tão fácil. Com nossa plataforma intuitiva, você pode criar um site profissional para sua loja em minutos, sem precisar de conhecimentos técnicos.

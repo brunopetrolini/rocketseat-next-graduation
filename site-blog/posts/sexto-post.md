@@ -2,9 +2,9 @@
 title: Tendências de e-commerce para ficar de olho
 date: 2025-03-01 10:00:00
 description: O mercado digital está em constante evolução. Conheça as principais tendências do e-commerce para se preparar e sair na frente da concorrência.
-image: https://images.unsplash.com/photo-1556742049-0cfed4f6a45d
+image: https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=1200&h=630&auto=format&fit=crop
 author: Alex Carvalho
-avatar: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d
+avatar: https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=36&h=36&auto=format&fit=crop
 ---
 
 O comércio eletrônico evolui rapidamente, impulsionado por novas tecnologias, mudanças no comportamento do consumidor e transformações no mercado global. Quem deseja manter seu negócio competitivo precisa estar atento às tendências que estão moldando o futuro do setor.
