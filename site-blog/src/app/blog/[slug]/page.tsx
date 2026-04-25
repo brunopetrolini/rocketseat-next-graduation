@@ -18,6 +18,8 @@ export async function generateMetadata({ params }: PostProps): Promise<Metadata>
     metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://blog.apollum.tech'),
     title: `${post.title} – Site.Set Blog`,
     description: post.description,
+    authors: [{ name: post.author }],
+    robots: 'index, follow',
     openGraph: {
       title: post.title,
       description: post.description,
