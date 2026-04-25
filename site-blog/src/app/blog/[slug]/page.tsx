@@ -15,8 +15,25 @@ export async function generateMetadata({ params }: PostProps): Promise<Metadata>
   if (!post) return {};
 
   return {
+    metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL || 'https://blog.apollum.tech'),
     title: `${post.title} – Site.Set Blog`,
     description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      url: `/blog/${post.slug}`,
+      siteName: 'Site.Set Blog',
+      locale: 'pt_BR',
+      type: 'article',
+      images: [
+        {
+          url: post.image,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
   };
 }
 
