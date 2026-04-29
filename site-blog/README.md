@@ -1,184 +1,42 @@
-<div align="center">
-
 # 🚀 Site Blog
 
-**Plataforma de blog e landing page para o Site.Set — crie sua loja online em minutos.**
+O **Site Blog** é a vitrine digital da **Site.Set**: uma landing page de alta conversão combinada com um blog completo sobre e-commerce e negócios online. A proposta é apresentar a plataforma de forma clara e atrativa, enquanto o conteúdo do blog educa e gera confiança para transformar visitantes em clientes.
 
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![Biome](https://img.shields.io/badge/Biome-2-60A5FA?style=for-the-badge&logo=biome&logoColor=white)](https://biomejs.dev/)
+## ✨ Funcionalidades Principais
 
-</div>
+- **Landing page focada em conversão:** seções de benefícios, prova social, suporte e chamada para ação.
+- **Blog com busca simples:** encontre conteúdos rapidamente por palavra-chave.
+- **Conteúdo gerenciado por Markdown:** publicar artigos é rápido e sem banco de dados.
+- **Design responsivo:** experiência consistente no mobile e no desktop.
+- **SEO-friendly:** páginas preparadas para melhor indexação.
 
----
+## 🚀 Tecnologias Utilizadas
 
-## 📖 Sobre o Projeto
+Este projeto foi construído com ferramentas modernas do ecossistema JavaScript:
 
-O **Site Blog** é uma aplicação web moderna que combina uma **landing page profissional** com um **sistema de blog completo**, desenvolvida com as tecnologias mais recentes do ecossistema JavaScript.
+- **[Next.js](https://nextjs.org/)** (React Framework)
+- **[TypeScript](https://www.typescriptlang.org/)** (Tipagem estática)
+- **[Tailwind CSS](https://tailwindcss.com/)** (Estilização)
+- **[Contentlayer](https://contentlayer.dev/)** (Conteúdo em Markdown)
+- **[Biome](https://biomejs.dev/)** (Linter e formatação)
 
-O projeto foi construído para o **Site.Set**, uma plataforma que ajuda empreendedores a criarem lojas virtuais e negócios de afiliados de forma simples e rápida. O blog publica artigos sobre e-commerce, dicas de negócios e estratégias de vendas online.
+## 🛠️ Como rodar o projeto localmente
 
----
+Para rodar o Site Blog na sua máquina, você precisa ter o [Node.js](https://nodejs.org/) instalado.
 
-## ✨ Funcionalidades
-
-- 🏠 **Landing Page** com seções de marketing otimizadas para conversão
-  - Hero com chamada para ação principal
-  - Seção de recursos e benefícios
-  - Seção de suporte ao cliente
-  - Histórias de sucesso de clientes
-  - Call-to-Action final
-- 📝 **Blog com busca em tempo real** via parâmetros de URL
-- 🎨 **Design responsivo** (mobile-first) com Tailwind CSS
-- ⚡ **Conteúdo gerenciado por Markdown** — sem banco de dados necessário
-- 🔍 **SEO-friendly** com metadados otimizados
-- 🖼️ **Otimização de imagens** com Next.js Image
-- 🔤 **Fontes otimizadas** (Inter + PT Sans Caption via Google Fonts)
-
----
-
-## 🛠️ Stack Tecnológica
-
-| Categoria | Tecnologia |
-|-----------|-----------|
-| **Framework** | [Next.js 16](https://nextjs.org/) com Pages Router |
-| **UI Library** | [React 19](https://react.dev/) |
-| **Linguagem** | [TypeScript 5](https://www.typescriptlang.org/) |
-| **Estilização** | [Tailwind CSS 4](https://tailwindcss.com/) |
-| **Componentes** | [Radix UI](https://www.radix-ui.com/) + [class-variance-authority](https://cva.style/) |
-| **Ícones** | [Lucide React](https://lucide.dev/) |
-| **CMS** | [Contentlayer2](https://contentlayer.dev/) (Markdown → TypeScript) |
-| **Datas** | [date-fns 4](https://date-fns.org/) |
-| **Linter/Formatter** | [Biome 2](https://biomejs.dev/) |
-
----
-
-## 📁 Estrutura do Projeto
-
-```
-site-blog/
-├── posts/                      # 📝 Artigos do blog (Markdown)
-├── public/                     # 🖼️ Arquivos estáticos (SVGs, favicon)
-├── src/
-│   ├── components/             # 🧩 Componentes reutilizáveis
-│   │   ├── active-link/        #    Link de navegação ativo
-│   │   ├── brand-logo/         #    Logo da marca
-│   │   ├── layout/             #    Header, Footer e Layout principal
-│   │   └── ui/                 #    Button, SearchInput
-│   ├── lib/                    # 🔧 Utilitários (formatação de datas, CSS)
-│   ├── pages/                  # 📄 Páginas Next.js (Pages Router)
-│   │   ├── index.tsx           #    Home / Landing Page
-│   │   ├── blog/               #    Listagem do blog
-│   │   └── api/                #    Rotas de API
-│   ├── styles/                 # 🎨 Estilos globais (Tailwind CSS)
-│   └── templates/              # 📐 Templates de página
-│       ├── blog/               #    Template do blog com busca
-│       └── landing-page/       #    Template da landing page
-│           └── sections/       #    Hero, Feature, Support, CTA...
-├── contentlayer.config.ts      # ⚙️ Configuração do Contentlayer
-├── next.config.ts              # ⚙️ Configuração do Next.js
-└── biome.json                  # ⚙️ Configuração do Biome
-```
-
----
-
-## 🚀 Como Executar
-
-### Pré-requisitos
-
-- [Node.js](https://nodejs.org/) **v24.14.0** (recomendado via [nvm](https://github.com/nvm-sh/nvm))
-- [npm](https://www.npmjs.com/)
-
-### Instalação
-
+**1. Instale as dependências:**
 ```bash
-# 1. Clone o repositório
-git clone <repo-url>
-
-# 2. Acesse a pasta do projeto
-cd <nome-da-pasta>/site-blog
-
-# 3. Use a versão correta do Node.js (se usar nvm)
-nvm use
-
-# 4. Instale as dependências
 npm install
 ```
 
-### Execução
-
+**2. Inicie o servidor de desenvolvimento:**
 ```bash
-# Modo de desenvolvimento (com hot-reload)
 npm run dev
-
-# Build de produção
-npm run build
-
-# Iniciar servidor de produção (após o build)
-npm start
 ```
 
-Acesse [http://localhost:3000](http://localhost:3000) no navegador para visualizar a aplicação.
+**3. Acesse a aplicação:**
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para visualizar o projeto.
 
 ---
 
-## 🧹 Qualidade de Código
-
-O projeto utiliza o [Biome](https://biomejs.dev/) como linter e formatter unificado:
-
-```bash
-# Verificar problemas de lint e formatação
-npm run lint
-
-# Formatar o código automaticamente
-npm run format
-```
-
----
-
-## 📝 Gerenciamento de Conteúdo
-
-Os posts do blog são arquivos **Markdown** localizados na pasta `posts/`. O [Contentlayer2](https://contentlayer.dev/) transforma esses arquivos em dados TypeScript type-safe durante o build.
-
-### Estrutura de um Post
-
-```markdown
----
-title: Título do artigo
-date: 2024-12-20 10:20:00
-description: Breve descrição do artigo
-image: https://url-da-imagem-de-capa.com
-author: Nome do Autor
-avatar: https://url-do-avatar.com
----
-
-Conteúdo do artigo em Markdown...
-```
-
-Para criar um novo post, basta adicionar um arquivo `.md` na pasta `posts/` seguindo a estrutura acima.
-
----
-
-## 🌐 Deploy
-
-A forma mais simples de fazer o deploy é pela [Vercel](https://vercel.com/), plataforma criada pelos desenvolvedores do Next.js:
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fbrunopetrolini%2Frocketseat-next-graduation%2Ftree%2Fmain%2Fsite-blog)
-
-Para outros provedores, consulte a [documentação de deploy do Next.js](https://nextjs.org/docs/pages/building-your-application/deploying).
-
----
-
-## 📄 Licença
-
-Este projeto está sob a licença **MIT**. O texto completo da licença será adicionado a este repositório.
-
----
-
-<div align="center">
-
-Feito com ❤️ durante a graduação na [Rocketseat](https://rocketseat.com.br) 🚀
-
-</div>
+> **Dica de Desenvolvimento:** Use `npm run lint` para checar formatação e `npm run format` para corrigir automaticamente.
