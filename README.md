@@ -29,7 +29,7 @@
 | Projeto | Proposta | Destaques |
 |---------|----------|-----------|
 | [`site-blog`](./site-blog) | **Site.Set** — landing page + blog para atrair, educar e converter clientes, mostrando composição de páginas e conteúdo tipado com Contentlayer. | Hero e CTA estratégicos, blog em Markdown, padrões de layout com Tailwind e foco em performance. |
-| [`petshop-planner`](./petshop-planner) | **Mundo Pet** — agenda inteligente para pet shops organizarem os atendimentos do dia, com filtros de data e fluxo de agendamentos. | Visão por períodos (manhã/tarde/noite), CRUD simples de agenda, cancelamentos e dark mode. |
+| [`petshop-planner`](./petshop-planner) | **Mundo Pet** — agenda inteligente para pet shops organizarem os atendimentos do dia, com filtros de data e fluxo de agendamentos. | Visão por períodos (manhã/tarde/noite), CRUD de agendamentos, cancelamentos e dark mode. |
 
 ---
 
@@ -63,6 +63,10 @@
 
 > **Dica:** Use o [nvm](https://github.com/nvm-sh/nvm) para gerenciar versões do Node.js.
 
+### Requisitos de build
+
+- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos e precisa de acesso à internet.
+
 ### Instalação rápida
 
 1. **Clone o repositório:**
@@ -88,10 +92,6 @@
 4. **Acesse no navegador:** [http://localhost:3000](http://localhost:3000)
 
 > Para detalhes de cada produto, confira os READMEs de [`site-blog`](./site-blog) e [`petshop-planner`](./petshop-planner).
-
-### Observações
-
-- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos e precisa de acesso à internet.
 
 ---
 
