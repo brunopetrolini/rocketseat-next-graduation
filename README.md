@@ -65,7 +65,7 @@
 
 ### Requisitos de build
 
-- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos; sem internet, o build pode falhar. Em ambientes offline, use fontes locais ou desative a otimização (veja: https://nextjs.org/docs/app/building-your-application/optimizing/fonts).
+- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos; sem internet, o build pode falhar. Em ambientes offline, use fontes locais ou desative a otimização (docs App Router: https://nextjs.org/docs/app/building-your-application/optimizing/fonts).
 
 ### Instalação rápida
 
