@@ -65,7 +65,7 @@
 
 ### Requisitos de build
 
-- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos e precisa de acesso à internet.
+- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos; sem internet, o build pode falhar.
 
 ### Instalação rápida
 
