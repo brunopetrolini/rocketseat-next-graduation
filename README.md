@@ -28,8 +28,8 @@
 
 | Projeto | Proposta | Destaques |
 |---------|----------|-----------|
-| [`site-blog`](./site-blog) | **Site.Set** — landing page + blog para atrair, educar e converter clientes, mostrando composição de páginas e conteúdo tipado com Contentlayer. | Hero + CTA estratégicos<br>Blog em Markdown<br>Layouts com Tailwind e foco em performance. |
-| [`petshop-planner`](./petshop-planner) | **Mundo Pet** — agenda inteligente para pet shops organizarem os atendimentos do dia, com filtros de data e fluxo de agendamentos. | Visão por períodos<br>CRUD de agendamentos<br>Cancelamentos e dark mode. |
+| [`site-blog`](./site-blog) | **Site.Set** — landing page + blog para atrair e converter clientes, com conteúdo tipado. | Hero + CTA estratégicos<br>Blog em Markdown<br>Layouts com Tailwind. |
+| [`petshop-planner`](./petshop-planner) | **Mundo Pet** — agenda para pet shops com filtros de data e fluxo de agendamentos. | Visão por períodos<br>CRUD de agendamentos<br>Cancelamentos e dark mode. |
 
 ---
 
@@ -66,7 +66,7 @@
 ### Requisitos de build
 
 - Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos.
-- Sem internet, o build pode falhar; em ambientes offline, use fontes locais ou desative a otimização. Documentação: App Router (https://nextjs.org/docs/app/building-your-application/optimizing/fonts) e Pages Router (https://nextjs.org/docs/pages/building-your-application/optimizing/fonts).
+- Sem internet, o build pode falhar; em ambientes offline, use fontes locais ou desative a otimização. Documentação: [App Router](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) e [Pages Router](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts).
 
 ### Instalação rápida
 
