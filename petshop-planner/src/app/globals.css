@@ -4,6 +4,10 @@
   /* Reset tailwind colors */
   --color-*: initial;
 
+  /* Fontes */
+  --font-sans: var(--font-sans);
+  --font-display: var(--font-display);
+
   /* Content colors */
   --color-content-primary: #FFFFFF;
   --color-content-secondary: #98959D;
@@ -30,4 +34,34 @@
   --color-accent-yellow-light: #756E1B;
   --color-accent-orange: #F09102;
   --color-accent-orange-light: #75501B;
+}
+
+@layer components {
+  .text-title {
+    @apply text-2xl font-bold;
+  }
+
+  .text-paragraph-md {
+    @apply text-sm;
+  }
+
+  .text-paragraph-sm {
+    @apply text-xs;
+  }
+
+  .text-label-lg {
+    @apply text-base font-bold;
+  }
+
+  .text-label-md {
+    @apply text-sm font-bold;
+  }
+
+  .text-label-sm {
+    @apply text-xs font-bold;
+  }
+
+  .text-link {
+    @apply text-xs;
+  }
 }

@@ -1,5 +1,8 @@
 export default function Home() {
   return (
-    <h1>Mundo Pet</h1>
+    <div>
+      <h1 className="font-display text-title">Mundo Pet</h1>
+      <p className="text-paragraph-md">Conteúdo</p>
+    </div>
   );
 }
