@@ -65,7 +65,7 @@
 
 ### Requisitos de build
 
-- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos; sem internet, o build pode falhar.
+- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos; sem internet, o build pode falhar. Em ambientes offline, use fontes locais ou desative a otimização.
 
 ### Instalação rápida
 
@@ -91,7 +91,7 @@
 
 4. **Acesse no navegador:** [http://localhost:3000](http://localhost:3000)
 
-> Para detalhes de cada produto, confira os READMEs de [`site-blog`](./site-blog) e [`petshop-planner`](./petshop-planner).
+> Para detalhes de cada produto, confira os READMEs de [`site-blog`](./site-blog) e [`petshop-planner`](./petshop-planner), com instruções completas de setup e scripts.
 
 ---
 
