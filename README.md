@@ -87,7 +87,11 @@
 
 4. **Acesse no navegador:** [http://localhost:3000](http://localhost:3000)
 
-> Para detalhes de cada produto, confira os READMEs de [`site-blog`](./site-blog/README.md) e [`petshop-planner`](./petshop-planner/README.md).
+> Para detalhes de cada produto, confira os READMEs de [`site-blog`](./site-blog) e [`petshop-planner`](./petshop-planner).
+
+### Observações
+
+- Os builds de produção precisam de acesso à internet para baixar as fontes do Google usadas nos projetos.
 
 ---
 
