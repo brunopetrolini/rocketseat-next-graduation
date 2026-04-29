@@ -65,7 +65,7 @@
 
 ### Requisitos de build
 
-- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos; sem internet, o build pode falhar. Em ambientes offline, use fontes locais ou desative a otimização.
+- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos; sem internet, o build pode falhar. Em ambientes offline, use fontes locais ou desative a otimização (veja: https://nextjs.org/docs/app/building-your-application/optimizing/fonts).
 
 ### Instalação rápida
 
@@ -79,7 +79,9 @@
 2. **Escolha o projeto e instale as dependências:**
 
    ```bash
-   cd site-blog # ou petshop-planner
+   cd site-blog
+   # ou
+   cd petshop-planner
    npm install
    ```
 
