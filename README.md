@@ -16,7 +16,7 @@
 
 <p align="center">
   <a href="#-projetos">Projetos</a> &bull;
-  <a href="#-diferenciais">Diferenciais</a> &bull;
+  <a href="#-destaques">Destaques</a> &bull;
   <a href="#-tecnologias">Tecnologias</a> &bull;
   <a href="#-como-começar">Como Começar</a> &bull;
   <a href="#-contribuindo">Contribuindo</a>
@@ -33,7 +33,7 @@
 
 ---
 
-## ✨ Diferenciais
+## ✨ Destaques
 
 - Produtos completos que mostram o fluxo de ponta a ponta (marketing + operação).
 - Interfaces rápidas e intuitivas, focadas em clareza para o usuário final.
@@ -65,7 +65,8 @@
 
 ### Requisitos de build
 
-- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos; sem internet, o build pode falhar. Em ambientes offline, use fontes locais ou desative a otimização (docs App Router: https://nextjs.org/docs/app/building-your-application/optimizing/fonts).
+- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos.
+- Sem internet, o build pode falhar; em ambientes offline, use fontes locais ou desative a otimização (App Router, usado nestes projetos: https://nextjs.org/docs/app/building-your-application/optimizing/fonts).
 
 ### Instalação rápida
 
