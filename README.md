@@ -3,7 +3,7 @@
 </h1>
 
 <p align="center">
-  Monorepo do projeto de formação <strong>Next.js</strong> da <a href="https://rocketseat.com.br">Rocketseat</a>, reunindo aplicações modernas construídas com as melhores práticas do ecossistema React.
+  Monorepo da formação <strong>Next.js</strong> da <a href="https://rocketseat.com.br">Rocketseat</a>, reunindo produtos prontos para acelerar negócios digitais — da atração de clientes ao dia a dia operacional.
 </p>
 
 <p align="center">
@@ -16,9 +16,9 @@
 
 <p align="center">
   <a href="#-projetos">Projetos</a> &bull;
+  <a href="#-destaques">Destaques</a> &bull;
   <a href="#-tecnologias">Tecnologias</a> &bull;
   <a href="#-como-começar">Como Começar</a> &bull;
-  <a href="#-estrutura">Estrutura</a> &bull;
   <a href="#-contribuindo">Contribuindo</a>
 </p>
 
@@ -26,27 +26,31 @@
 
 ## 📦 Projetos
 
-Este monorepo contém os seguintes projetos:
+| Projeto | Proposta | Destaques |
+|---------|----------|-----------|
+| [`site-blog`](./site-blog) | **Site.Set** — landing page + blog para atrair e converter clientes, com conteúdo tipado. | Hero + CTA estratégicos<br>Blog em Markdown<br>Layouts com Tailwind. |
+| [`petshop-planner`](./petshop-planner) | **Mundo Pet** — agenda para pet shops com filtros de data e fluxo de agendamentos. | Visão por períodos<br>CRUD de agendamentos<br>Cancelamentos e dark mode. |
 
-| Projeto | Descrição | Stack |
-|---------|-----------|-------|
-| [`site-blog`](./site-blog) | Landing page de marketing + blog com CMS baseado em Markdown para a plataforma **Site.Set** | Next.js · Tailwind CSS · Contentlayer2 |
+---
+
+## ✨ Destaques
+
+- Produtos completos que mostram o fluxo de ponta a ponta (marketing + operação).
+- Interfaces rápidas e intuitivas, focadas em clareza para o usuário final.
+- Layout responsivo e acessível, pronto para desktop e mobile.
+- Base moderna e fácil de evoluir para novos cenários de negócio.
 
 ---
 
 ## 🛠 Tecnologias
 
-As principais tecnologias utilizadas ao longo dos projetos deste monorepo:
-
-- **[Next.js 16](https://nextjs.org/)** — Framework React com Pages Router, Turbopack e otimizações de imagem
-- **[React 19](https://react.dev/)** — Biblioteca para construção de interfaces de usuário
-- **[TypeScript 5](https://www.typescriptlang.org/)** — Superset tipado de JavaScript
-- **[Tailwind CSS 4](https://tailwindcss.com/)** — Framework CSS utilitário de última geração
-- **[Contentlayer2](https://github.com/timlrx/contentlayer2)** — Transformação de conteúdo Markdown em dados tipados
-- **[Radix UI](https://www.radix-ui.com/)** — Componentes acessíveis e sem estilo
-- **[Biome](https://biomejs.dev/)** — Linter e formatador de código ultrarrápido
-- **[date-fns](https://date-fns.org/)** — Biblioteca moderna de utilitários para datas
-- **[Lucide React](https://lucide.dev/)** — Conjunto de ícones consistentes e customizáveis
+- **[Next.js 16](https://nextjs.org/)** — Framework React com foco em performance
+- **[React 19](https://react.dev/)** — Biblioteca para interfaces modernas
+- **[TypeScript 5](https://www.typescriptlang.org/)** — Tipagem estática para segurança e escala
+- **[Tailwind CSS 4](https://tailwindcss.com/)** — Estilização rápida e consistente
+- **[Contentlayer2](https://github.com/timlrx/contentlayer2)** — Conteúdo Markdown tipado (site-blog)
+- **[Radix UI](https://www.radix-ui.com/)** — Componentes acessíveis
+- **[Biome](https://biomejs.dev/)** — Linter e formatador ultrarrápido
 
 ---
 
@@ -54,12 +58,17 @@ As principais tecnologias utilizadas ao longo dos projetos deste monorepo:
 
 ### Pré-requisitos
 
-- [Node.js](https://nodejs.org/) `>= 24.14.0` (verifique o arquivo `.nvmrc` de cada projeto)
+- [Node.js](https://nodejs.org/) `>= 24.14.0` (verifique o `.nvmrc` de cada projeto)
 - [npm](https://www.npmjs.com/) `>= 10`
 
 > **Dica:** Use o [nvm](https://github.com/nvm-sh/nvm) para gerenciar versões do Node.js.
 
-### Instalação
+### Requisitos de build
+
+- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos.
+- Sem internet, o build pode falhar; em ambientes offline, use fontes locais ou desative a otimização. Documentação: [App Router](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) e [Pages Router](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts).
+
+### Instalação rápida
 
 1. **Clone o repositório:**
 
@@ -68,10 +77,12 @@ As principais tecnologias utilizadas ao longo dos projetos deste monorepo:
    cd rocketseat-next-graduation
    ```
 
-2. **Escolha um projeto e instale as dependências:**
+2. **Escolha o projeto e instale as dependências:**
 
    ```bash
    cd site-blog
+   # ou
+   cd petshop-planner
    npm install
    ```
 
@@ -83,67 +94,7 @@ As principais tecnologias utilizadas ao longo dos projetos deste monorepo:
 
 4. **Acesse no navegador:** [http://localhost:3000](http://localhost:3000)
 
----
-
-## 🗂 Estrutura
-
-```
-rocketseat-next-graduation/
-│
-└── site-blog/                  # Landing page + blog (Site.Set)
-    ├── posts/                  # Conteúdo dos posts em Markdown
-    ├── public/                 # Assets estáticos (SVGs, ícones)
-    ├── src/
-    │   ├── components/         # Componentes reutilizáveis
-    │   │   ├── active-link/
-    │   │   ├── brand-logo/
-    │   │   ├── layout/
-    │   │   │   ├── header/
-    │   │   │   └── footer/
-    │   │   └── ui/             # Primitivos de UI (Button, SearchInput)
-    │   ├── lib/                # Utilitários (cn, formatação de datas)
-    │   ├── pages/              # Roteamento Next.js (Pages Router)
-    │   │   ├── index.tsx       # Página inicial (landing page)
-    │   │   └── blog/           # Listagem do blog
-    │   ├── styles/             # Estilos globais e tema Tailwind
-    │   └── templates/          # Templates de página compostos
-    │       ├── landing-page/   # Seções: Hero, Feature, CTA…
-    │       └── blog/           # Template de listagem de posts
-    ├── biome.json
-    ├── contentlayer.config.ts
-    ├── next.config.ts
-    └── tsconfig.json
-```
-
----
-
-## 🖥 site-blog
-
-> Uma plataforma de marketing e blog para o **Site.Set** — a solução que transforma qualquer negócio em uma loja virtual.
-
-### Funcionalidades
-
-- 🏠 **Landing Page** — Seções de Hero, Features, Depoimentos e Call to Action
-- 📝 **Blog** — Listagem e pesquisa de artigos, processados a partir de arquivos Markdown
-- 🎨 **Design System** — Sistema de cores e tipografia customizado com Tailwind CSS v4
-- ♿ **Acessibilidade** — Componentes baseados em Radix UI
-- 📱 **Responsivo** — Layout adaptado para mobile, tablet e desktop
-
-### Scripts disponíveis
-
-Execute dentro de `./site-blog`:
-
-| Comando | Descrição |
-|---------|-----------|
-| `npm run dev` | Inicia o servidor de desenvolvimento com Turbopack |
-| `npm run build` | Gera o build de produção |
-| `npm run start` | Inicia o servidor de produção |
-| `npm run lint` | Executa a verificação de qualidade de código com Biome |
-| `npm run format` | Formata o código com Biome |
-
-### Deploy
-
-O jeito mais fácil de fazer deploy é usar a [Plataforma Vercel](https://vercel.com/new). Basta conectar seu repositório e a Vercel cuidará de todo o processo automaticamente.
+> Para detalhes de cada produto, confira os READMEs de [`site-blog`](./site-blog) e [`petshop-planner`](./petshop-planner), com instruções completas de setup e scripts.
 
 ---
 
