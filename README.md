@@ -28,8 +28,8 @@
 
 | Projeto | Proposta | Destaques |
 |---------|----------|-----------|
-| [`site-blog`](./site-blog) | **Site.Set** — landing page + blog para atrair, educar e converter clientes. | Hero e CTA estratégicos, blog em Markdown, experiência responsiva e foco em marketing. |
-| [`petshop-planner`](./petshop-planner) | **Mundo Pet** — agenda inteligente para pet shops organizarem os atendimentos do dia. | Visão por períodos (manhã/tarde/noite), filtro de datas, agendamento rápido, cancelamentos e dark mode. |
+| [`site-blog`](./site-blog) | **Site.Set** — landing page + blog para atrair, educar e converter clientes, mostrando composição de páginas e conteúdo tipado com Contentlayer. | Hero e CTA estratégicos, blog em Markdown, padrões de layout com Tailwind e foco em performance. |
+| [`petshop-planner`](./petshop-planner) | **Mundo Pet** — agenda inteligente para pet shops organizarem os atendimentos do dia, com filtros de data e fluxo de agendamentos. | Visão por períodos (manhã/tarde/noite), CRUD simples de agenda, cancelamentos e dark mode. |
 
 ---
 
@@ -91,7 +91,7 @@
 
 ### Observações
 
-- Os builds de produção precisam de acesso à internet para baixar as fontes do Google usadas nos projetos.
+- Durante o build, o Next.js tenta otimizar as fontes do Google usadas nos projetos e precisa de acesso à internet.
 
 ---
 
