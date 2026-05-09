@@ -1,10 +1,10 @@
-import { Button } from "@/components/ui/button";
+import { Button } from '@/components/ui/button';
+import { TextField } from '@/components/ui/text-field';
 
 export default function Home() {
   return (
     <div>
-      <h1 className="font-display text-title">Mundo Pet</h1>
-      <p className="text-paragraph-md">Conteúdo</p>
+      <TextField title='Nome do tutor' placeholder="Helena Souza" />
       <Button>Botão</Button>
     </div>
   );
