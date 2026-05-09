@@ -17,10 +17,12 @@
     "pg": "^8.20.0",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "tailwind-merge": "^3.5.0"
+    "tailwind-merge": "^3.5.0",
+    "tailwind-variants": "^3.2.2"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.4.13",
+    "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^25.6.0",
     "@types/pg": "^8.20.0",
