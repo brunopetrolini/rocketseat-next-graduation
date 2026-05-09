@@ -1,9 +1,6 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Reset tailwind colors */
-  --color-*: initial;
-
   /* Fontes */
   --font-sans: var(--font-sans);
   --font-display: var(--font-display);
