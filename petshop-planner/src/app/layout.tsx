@@ -1,22 +1,22 @@
-import "@/styles/globals.css";
+import '@/styles/globals.css';
 
-import type { Metadata } from "next";
-import { Inter, Inter_Tight } from "next/font/google";
+import type { Metadata } from 'next';
+import { Inter, Inter_Tight } from 'next/font/google';
 
 const interTight = Inter_Tight({
-  subsets: ["latin"],
-  variable: "--font-display",
-  weight: ["500", "700"],
+  subsets: ['latin'],
+  variable: '--font-display',
+  weight: ['500', '700'],
 });
 
 const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
+  subsets: ['latin'],
+  variable: '--font-sans',
 });
 
 export const metadata: Metadata = {
-  title: "Mundo Pet",
-  description: "Plataforma de agendamento para Pet Shops",
+  title: 'Mundo Pet',
+  description: 'Plataforma de agendamento para Pet Shops',
 };
 
 export default function RootLayout({
