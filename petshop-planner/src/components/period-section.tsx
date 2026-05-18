@@ -37,9 +37,15 @@ export function PeriodSection({ periodAppointments }: PeriodSectionProps) {
 
       {/* Content */}
       <div className="flex flex-col gap-4 p-5">
-        {periodAppointments.appointments?.map((appointment) => (
-          <AppointmentItem key={appointment.id} appointment={appointment} />
-        ))}
+        {periodAppointments.appointments.length > 0 ? (
+          periodAppointments.appointments.map((appointment) => (
+            <AppointmentItem key={appointment.id} appointment={appointment} />
+          ))
+        ) : (
+          <p className="text-content-secondary text-paragraph-md">
+            Nenhum agendamento para este período.
+          </p>
+        )}
       </div>
     </section>
   );
