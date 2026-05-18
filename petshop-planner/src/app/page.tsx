@@ -98,7 +98,7 @@ export default function Home() {
         </div>
       </div>
 
-      <main>
+      <main className="mt-8 flex flex-col">
         {groupedAppointments.map((groupAppointment) => (
           <PeriodSection
             key={groupAppointment.type}
