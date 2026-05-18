@@ -33,16 +33,6 @@ const appointments: PrismaAppointment[] = [
     createdAt: new Date('2026-04-25T09:00:00'),
     updatedAt: new Date('2026-04-25T09:00:00'),
   },
-  {
-    id: '4',
-    petName: 'Max',
-    description: 'Corte de Unhas',
-    tutorName: 'Ana Souza',
-    phone: '11966666666',
-    scheduledTo: new Date('2026-05-13T19:30:00'),
-    createdAt: new Date('2026-04-25T09:00:00'),
-    updatedAt: new Date('2026-04-25T09:00:00'),
-  },
 ];
 
 function getPeriod(hour: number): 'morning' | 'afternoon' | 'evening' {
