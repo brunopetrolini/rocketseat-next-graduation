@@ -27,7 +27,7 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
-      className={`${interTight.variable} ${inter.variable} h-full bg-background-primary font-sans text-content-primary antialiased`}
+      className={`${interTight.variable} ${inter.variable} bg-background-primary font-sans text-content-primary antialiased`}
     >
       <body className="flex min-h-full flex-col">{children}</body>
     </html>

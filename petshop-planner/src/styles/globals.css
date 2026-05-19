@@ -64,4 +64,8 @@
   .text-link {
     @apply text-xs;
   }
+
+  .container {
+    @apply max-w-3xl h-full;
+  }
 }

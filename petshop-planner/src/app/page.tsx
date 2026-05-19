@@ -88,8 +88,8 @@ export default function Home() {
   const groupedAppointments = groupAppointmentsByPeriod(appointments);
 
   return (
-    <div className="p-6">
-      <div className="flex items-center justify-between md:m-8">
+    <div className="container mt-14 p-6 md:mt-20 md:pt-0">
+      <div className="flex flex-col items-center justify-between md:m-8 md:flex-row">
         <div>
           <h1 className="mb-2 text-title">Sua agenda</h1>
           <p className="text-content-secondary text-paragraph-md">
