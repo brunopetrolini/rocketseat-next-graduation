@@ -29,7 +29,7 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${interTight.variable} ${inter.variable} bg-background-primary font-sans text-content-primary antialiased`}
     >
-      <body className="flex min-h-full flex-col">{children}</body>
+      <body className="container">{children}</body>
     </html>
   );
 }
