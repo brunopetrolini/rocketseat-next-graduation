@@ -38,7 +38,7 @@ export function PeriodSection({ periodAppointments }: PeriodSectionProps) {
   }
 
   return (
-    <section className="mb-8 rounded-xl bg-background-tertiary">
+    <section className="not-last:mb-8 rounded-xl bg-background-tertiary">
       {/* Header */}
       <div className="flex items-center justify-between border-[#2E2C30] border-b px-5 py-3">
         <div className="flex flex-1 flex-row items-center gap-3">
