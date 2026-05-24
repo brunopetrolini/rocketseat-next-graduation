@@ -1,11 +1,17 @@
+'use client';
+
 import type { Appointment } from '@/types/appointment';
 import { Button } from './ui/button';
 
 type AppointmentItemProps = {
   appointment: Appointment;
+  onRemove: (appointmentId: string) => void;
 };
 
-export function AppointmentItem({ appointment }: AppointmentItemProps) {
+export function AppointmentItem({
+  appointment,
+  onRemove,
+}: AppointmentItemProps) {
   return (
     <div className="not-last:border-border-divisor not-last:border-b p-3">
       <div className="flex flex-col md:flex-row md:items-center md:justify-between">
@@ -23,7 +29,9 @@ export function AppointmentItem({ appointment }: AppointmentItemProps) {
         </span>
 
         <div className="mt-2 mr-3 mb-3 flex justify-end">
-          <Button variant="outline">Remover agendamento</Button>
+          <Button variant="outline" onClick={() => onRemove(appointment.id)}>
+            Remover agendamento
+          </Button>
         </div>
       </div>
     </div>

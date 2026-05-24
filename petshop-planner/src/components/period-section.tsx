@@ -1,4 +1,7 @@
+'use client';
+
 import { CloudSunIcon, MoonStarIcon, SunIcon } from 'lucide-react';
+import { useState } from 'react';
 
 import type { PeriodAppointments } from '@/types/appointment';
 import { AppointmentItem } from './appointment-item';
@@ -20,7 +23,19 @@ type PeriodSectionProps = {
 };
 
 export function PeriodSection({ periodAppointments }: PeriodSectionProps) {
+  const [appointments, setAppointments] = useState(
+    periodAppointments.appointments,
+  );
+
   const currentPeriod = periodIcons[periodAppointments.type];
+
+  function handleRemoveAppointment(appointmentId: string) {
+    setAppointments((prevAppointments) =>
+      prevAppointments.filter(
+        (appointment) => appointment.id !== appointmentId,
+      ),
+    );
+  }
 
   return (
     <section className="mb-8 rounded-xl bg-background-tertiary">
@@ -37,9 +52,13 @@ export function PeriodSection({ periodAppointments }: PeriodSectionProps) {
 
       {/* Content */}
       <div className="flex flex-col gap-4 p-5">
-        {periodAppointments.appointments.length > 0 ? (
-          periodAppointments.appointments.map((appointment) => (
-            <AppointmentItem key={appointment.id} appointment={appointment} />
+        {appointments.length > 0 ? (
+          appointments.map((appointment) => (
+            <AppointmentItem
+              key={appointment.id}
+              appointment={appointment}
+              onRemove={handleRemoveAppointment}
+            />
           ))
         ) : (
           <p className="text-content-secondary text-paragraph-md">
