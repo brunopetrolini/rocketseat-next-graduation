@@ -8,7 +8,7 @@ const button = tv({
   variants: {
     variant: {
       primary:
-        'px-5 py-3 text-[#050505] text-label-lg uppercase rounded-lg bg-content-brand hover:bg-background-highlights',
+        'px-5 py-3 text-[#050505] text-label-lg  rounded-lg bg-background-brand hover:bg-background-highlights',
       outline:
         'text-content-tertiary text-paragraph-sm hover:text-content-primary hover:underline',
     },
