@@ -8,6 +8,7 @@ import { z } from 'zod';
 
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+import { Textarea } from './ui/textarea';
 
 const appointmentFormSchema = z.object({
   tutorName: z.string().min(3, 'O nome do tutor é obrigatório.'),
@@ -91,7 +92,7 @@ export function AppointmentForm() {
               {...form.register('phone')}
             />
 
-            <Input
+            <Textarea
               title="Descrição do serviço"
               placeholder="Banho e tosa"
               error={form.formState.errors.description?.message}
