@@ -2,11 +2,12 @@
 
 import { Dialog as BaseDialog } from '@base-ui/react/dialog';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { XIcon } from 'lucide-react';
+import { PawPrintIcon, PhoneIcon, UserIcon, XIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import { Button } from './ui/button';
+import { Input } from './ui/input';
 
 const appointmentFormSchema = z.object({
   tutorName: z.string().min(3, 'O nome do tutor é obrigatório.'),
@@ -62,45 +63,42 @@ export function AppointmentForm() {
             </BaseDialog.Description>
           </div>
 
-          <form onSubmit={form.handleSubmit(onSubmit)}>
-            <input
-              type="text"
-              placeholder="Nome do tutor"
-              aria-invalid={Boolean(form.formState.errors.tutorName)}
+          <form
+            onSubmit={form.handleSubmit(onSubmit)}
+            className="mt-7 flex flex-col gap-4"
+          >
+            <Input
+              icon={UserIcon}
+              title="Nome do tutor"
+              placeholder="Helena Souza"
+              error={form.formState.errors.tutorName?.message}
               {...form.register('tutorName')}
             />
-            {form.formState.errors.tutorName && (
-              <p role="alert">{form.formState.errors.tutorName.message}</p>
-            )}
-            <input
-              type="text"
-              placeholder="Nome do pet"
-              aria-invalid={Boolean(form.formState.errors.petName)}
+
+            <Input
+              icon={PawPrintIcon}
+              title="Nome do pet"
+              placeholder="Cheddar"
+              error={form.formState.errors.petName?.message}
               {...form.register('petName')}
             />
-            {form.formState.errors.petName && (
-              <p role="alert">{form.formState.errors.petName.message}</p>
-            )}
-            <input
-              type="text"
-              placeholder="Telefone"
-              aria-invalid={Boolean(form.formState.errors.phone)}
+
+            <Input
+              icon={PhoneIcon}
+              title="Telefone"
+              placeholder="(00) 0 0000-0000"
+              error={form.formState.errors.phone?.message}
               {...form.register('phone')}
             />
-            {form.formState.errors.phone && (
-              <p role="alert">{form.formState.errors.phone.message}</p>
-            )}
-            <input
-              type="text"
-              placeholder="Descrição"
-              aria-invalid={Boolean(form.formState.errors.description)}
+
+            <Input
+              title="Descrição do serviço"
+              placeholder="Banho e tosa"
+              error={form.formState.errors.description?.message}
               {...form.register('description')}
             />
-            {form.formState.errors.description && (
-              <p role="alert">{form.formState.errors.description.message}</p>
-            )}
 
-            <Button type="submit" className="w-full">
+            <Button type="submit" className="mt-3 w-fit self-end uppercase">
               Agendar
             </Button>
           </form>

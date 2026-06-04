@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@source "../components";
 
 @theme inline {
   /* Fontes */
@@ -28,6 +29,7 @@
   --color-border-divisor: #353339;
 
   /* Accent colors */
+  --color-accent-danger: #f03e3e;
   --color-accent-blue: #027df0;
   --color-accent-blue-light: #16487a;
   --color-accent-yellow: #f0dc02;
