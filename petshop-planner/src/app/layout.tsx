@@ -1,4 +1,5 @@
 import '@/styles/globals.css';
+import '@daypicker/react/style.css';
 
 import type { Metadata } from 'next';
 import { Inter, Inter_Tight } from 'next/font/google';

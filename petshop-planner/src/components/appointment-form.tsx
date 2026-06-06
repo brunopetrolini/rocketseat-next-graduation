@@ -3,10 +3,11 @@
 import { Dialog as BaseDialog } from '@base-ui/react/dialog';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { PawPrintIcon, UserIcon, XIcon } from 'lucide-react';
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import { Button } from './ui/button';
+import { DateTimePicker } from './ui/date-time-picker';
 import { Input } from './ui/input';
 import { PhoneInput } from './ui/phone-input';
 import { Textarea } from './ui/textarea';
@@ -16,6 +17,11 @@ const appointmentFormSchema = z.object({
   petName: z.string().min(3, 'O nome do pet é obrigatório.'),
   phone: z.string().min(14, 'O número de telefone é obrigatório.'),
   description: z.string().min(3, 'A descrição do atendimento é obrigatória.'),
+  scheduleAt: z
+    .date('A data e hora do atendimento é obrigatória.')
+    .refine((date) => date > new Date(), {
+      message: 'A data e hora do atendimento deve ser futura.',
+    }),
 });
 
 type AppointmentFormData = z.infer<typeof appointmentFormSchema>;
@@ -28,6 +34,7 @@ export function AppointmentForm() {
       petName: '',
       phone: '',
       description: '',
+      scheduleAt: undefined,
     },
   });
 
@@ -97,6 +104,19 @@ export function AppointmentForm() {
               placeholder="Banho e tosa"
               error={form.formState.errors.description?.message}
               {...form.register('description')}
+            />
+
+            <Controller
+              control={form.control}
+              name="scheduleAt"
+              render={({ field }) => (
+                <DateTimePicker
+                  title="Data e hora"
+                  value={field.value}
+                  onChange={field.onChange}
+                  error={form.formState.errors.scheduleAt?.message}
+                />
+              )}
             />
 
             <Button type="submit" className="mt-7 w-fit self-end uppercase">
