@@ -2,18 +2,19 @@
 
 import { Dialog as BaseDialog } from '@base-ui/react/dialog';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { PawPrintIcon, PhoneIcon, UserIcon, XIcon } from 'lucide-react';
+import { PawPrintIcon, UserIcon, XIcon } from 'lucide-react';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import { Button } from './ui/button';
 import { Input } from './ui/input';
+import { PhoneInput } from './ui/phone-input';
 import { Textarea } from './ui/textarea';
 
 const appointmentFormSchema = z.object({
   tutorName: z.string().min(3, 'O nome do tutor é obrigatório.'),
   petName: z.string().min(3, 'O nome do pet é obrigatório.'),
-  phone: z.string().min(11, 'O número de telefone é obrigatório.'),
+  phone: z.string().min(14, 'O número de telefone é obrigatório.'),
   description: z.string().min(3, 'A descrição do atendimento é obrigatória.'),
 });
 
@@ -84,8 +85,7 @@ export function AppointmentForm() {
               {...form.register('petName')}
             />
 
-            <Input
-              icon={PhoneIcon}
+            <PhoneInput
               title="Telefone"
               placeholder="(00) 0 0000-0000"
               error={form.formState.errors.phone?.message}
@@ -99,7 +99,7 @@ export function AppointmentForm() {
               {...form.register('description')}
             />
 
-            <Button type="submit" className="mt-3 w-fit self-end uppercase">
+            <Button type="submit" className="mt-7 w-fit self-end uppercase">
               Agendar
             </Button>
           </form>
