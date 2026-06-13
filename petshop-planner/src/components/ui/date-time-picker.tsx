@@ -51,7 +51,7 @@ const pickerVariants = tv({
     container: 'flex flex-col gap-1',
     label: 'text-content-primary text-label-md',
     field:
-      'flex w-full items-center gap-2 rounded-lg border border-border-primary p-3 text-content-primary transition-colors duration-200 focus-within:border-border-brand focus-within:outline-none focus-within:ring-0 hover:border-border-secondary disabled:cursor-not-allowed disabled:opacity-60',
+      'cursor-pointer flex w-full items-center gap-2 rounded-lg border border-border-primary p-3 text-content-primary transition-colors duration-200 focus-within:border-border-brand focus-within:outline-none focus-within:ring-0 hover:border-border-secondary disabled:cursor-not-allowed disabled:opacity-60',
     value: 'flex-1 truncate bg-transparent text-left outline-none',
     placeholder: 'text-content-secondary',
     icon: 'size-5 shrink-0 text-content-brand fill-background-highlights',
