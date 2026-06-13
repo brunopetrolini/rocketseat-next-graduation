@@ -2,7 +2,7 @@
 
 import { Dialog as BaseDialog } from '@base-ui/react/dialog';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { PawPrintIcon, UserIcon, XIcon } from 'lucide-react';
+import { Loader2, PawPrintIcon, UserIcon, XIcon } from 'lucide-react';
 import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
 
@@ -119,8 +119,16 @@ export function AppointmentForm() {
               )}
             />
 
-            <Button type="submit" className="mt-7 w-fit self-end uppercase">
-              Agendar
+            <Button
+              type="submit"
+              className="mt-7 w-fit self-end uppercase"
+              disabled={form.formState.isSubmitting}
+            >
+              {form.formState.isSubmitting ? (
+                <Loader2 className="animate-spin" />
+              ) : (
+                'Agendar'
+              )}
             </Button>
           </form>
         </BaseDialog.Popup>
