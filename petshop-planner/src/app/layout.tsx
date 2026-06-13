@@ -3,6 +3,7 @@ import '@daypicker/react/style.css';
 
 import type { Metadata } from 'next';
 import { Inter, Inter_Tight } from 'next/font/google';
+import Script from 'next/script';
 
 const interTight = Inter_Tight({
   subsets: ['latin'],
@@ -20,6 +21,10 @@ export const metadata: Metadata = {
   description: 'Plataforma de agendamento para Pet Shops',
 };
 
+const shouldLoadReactDevtools =
+  process.env.NODE_ENV === 'development' &&
+  process.env.REACT_DEVTOOLS === 'true';
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -30,7 +35,12 @@ export default function RootLayout({
       lang="pt-BR"
       className={`${interTight.variable} ${inter.variable} bg-background-primary font-sans text-content-primary antialiased`}
     >
-      <body className="container">{children}</body>
+      <body className="container">
+        {children}
+        {shouldLoadReactDevtools && (
+          <Script src="http://localhost:8097" strategy="beforeInteractive" />
+        )}
+      </body>
     </html>
   );
 }
