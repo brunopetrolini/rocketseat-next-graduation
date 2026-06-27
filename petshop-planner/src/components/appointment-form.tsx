@@ -2,6 +2,8 @@
 
 import { Dialog as BaseDialog } from '@base-ui/react/dialog';
 import { zodResolver } from '@hookform/resolvers/zod';
+import { format } from 'date-fns';
+import { ptBR } from 'date-fns/locale';
 import { Loader2, PawPrintIcon, UserIcon, XIcon } from 'lucide-react';
 import { Controller, useForm } from 'react-hook-form';
 import { z } from 'zod';
@@ -11,6 +13,7 @@ import { DateTimePicker } from './ui/date-time-picker';
 import { Input } from './ui/input';
 import { PhoneInput } from './ui/phone-input';
 import { Textarea } from './ui/textarea';
+import { useToast } from './ui/toast';
 
 const appointmentFormSchema = z.object({
   tutorName: z.string().min(3, 'O nome do tutor é obrigatório.'),
@@ -27,6 +30,8 @@ const appointmentFormSchema = z.object({
 type AppointmentFormData = z.infer<typeof appointmentFormSchema>;
 
 export function AppointmentForm() {
+  const toast = useToast();
+
   const form = useForm<AppointmentFormData>({
     resolver: zodResolver(appointmentFormSchema),
     defaultValues: {
@@ -39,7 +44,11 @@ export function AppointmentForm() {
   });
 
   function onSubmit(data: AppointmentFormData) {
-    console.log(data);
+    toast.success({
+      title: 'Agendamento realizado com sucesso!',
+      description: `O atendimento para ${data.petName} foi agendado para ${format(data.scheduleAt, "d 'de' MMMM 'de' yyyy 'às' HH:mm", { locale: ptBR })}.`,
+    });
+    4;
   }
 
   return (

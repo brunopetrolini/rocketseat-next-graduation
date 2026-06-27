@@ -1,9 +1,12 @@
 import '@/styles/globals.css';
+
 import '@daypicker/react/style.css';
 
 import type { Metadata } from 'next';
 import { Inter, Inter_Tight } from 'next/font/google';
 import Script from 'next/script';
+
+import { ToastProvider } from '@/components/ui/toast';
 
 const interTight = Inter_Tight({
   subsets: ['latin'],
@@ -36,7 +39,7 @@ export default function RootLayout({
       className={`${interTight.variable} ${inter.variable} bg-background-primary font-sans text-content-primary antialiased`}
     >
       <body className="container">
-        {children}
+        <ToastProvider>{children}</ToastProvider>
         {shouldLoadReactDevtools && (
           <Script src="http://localhost:8097" strategy="beforeInteractive" />
         )}

@@ -29,6 +29,7 @@
   --color-border-divisor: #353339;
 
   /* Accent colors */
+  --color-accent-success: #04d361;
   --color-accent-danger: #f03e3e;
   --color-accent-blue: #027df0;
   --color-accent-blue-light: #16487a;
